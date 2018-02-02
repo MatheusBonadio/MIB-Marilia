@@ -1,0 +1,32 @@
+Options +FollowSymLinks
+Options All -Indexes
+
+ErrorDocument 404 /home.php?url=404
+ErrorDocument 403 /home.php?url=403
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteRule ^([A-Za-z0-9-]+)/?$ home.php?torneio=$1 [NC]
+    RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ home.php?torneio=$1&url=$2 [NC]
+    RewriteRule ^([A-Za-z0-9-]+)/partidas/?([A-Za-z0-9-]+)/?$ home.php?torneio=$1&url=id-partida&id=$2 [NC]
+</IfModule>
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+    deny from all
+</Files>
+
+<IfModule mod_deflate.c>
+    <FilesMatch "\.(js|css|jpg|png|gif|ico|php|html|htm|ttf)$">
+        <ifModule mod_filter.c>
+            SetOutputFilter DEFLATE
+            AddOutputFilterByType DEFLATE text/css text/javascript application/x-javascript text/html text/plain text/xml image/x-icon font/opentype font/truetype font/eot
+        </IfModule>
+    </FilesMatch>
+</IfModule>
+
+
+
+
+
