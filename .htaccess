@@ -1,16 +1,16 @@
 Options +FollowSymLinks
 Options All -Indexes
 
-ErrorDocument 404 /home.php?url=404
-ErrorDocument 403 /home.php?url=403
+DirectoryIndex /home.php
+ErrorDocument 404 /errors/404.php
+ErrorDocument 403 /errors/403.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{SCRIPT_FILENAME} !-d
-    RewriteRule ^([A-Za-z0-9-]+)/?$ home.php?torneio=$1 [NC]
-    RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ home.php?torneio=$1&url=$2 [NC]
-    RewriteRule ^([A-Za-z0-9-]+)/partidas/?([A-Za-z0-9-]+)/?$ home.php?torneio=$1&url=id-partida&id=$2 [NC]
+    RewriteRule ^home/?$ /home.php [NC]
+    RewriteRule ^lineup/?$ /pages/evento.php [NC]
 </IfModule>
 
 <Files ~ "^\.(htaccess|htpasswd)$">
@@ -25,8 +25,3 @@ ErrorDocument 403 /home.php?url=403
         </IfModule>
     </FilesMatch>
 </IfModule>
-
-
-
-
-

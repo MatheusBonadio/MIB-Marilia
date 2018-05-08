@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+.header{
+	width: 100%;
+	height: 100px;
+	box-shadow: 0 2px 30px 2px rgba(0,0,0,.05);
+	font: 400 14px Dosis;
+	box-sizing: border-box;
+	display: flex;
+	padding: 0 9vw;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+.header .img{
+	width: 250px;
+	height: 100%;
+	background-image: url("/public/img/sistema/logo.svg");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.header a{
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 20px 10px;
+	margin: 0 3px;
+	border-bottom: 2px solid transparent;
+	transition: .3s;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.header .active{
+	border-bottom: 2px solid #0099ff;
+	color: #0099ff;
+	cursor: default;
+}
+.header a:hover{
+	color: #0099ff;
+}
+.header a:nth-child(1){
+	height: 100%;
+	border-bottom: 2px solid transparent;
+	position: absolute;
+	left: 9vw;
+}

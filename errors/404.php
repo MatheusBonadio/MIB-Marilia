@@ -2,5 +2,5 @@
     <div class='error'>
         <label>404</label>
         <div class='line'></div>
-        <label>é melhor sair daqui rápido, você não quer ficar fora do próximo jogo, não é?</label>
+        <label>Algo deu errado</label>
     </div>

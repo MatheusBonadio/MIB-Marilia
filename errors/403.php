@@ -2,5 +2,5 @@
     <div class='error _403'>
         <label>403</label>
         <div class='line'></div>
-        <label>Permissão negada, será que foi sem intensão mesmo?</label>
+        <label>Permissão negada</label>
     </div>
