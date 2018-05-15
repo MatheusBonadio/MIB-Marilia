@@ -1,6 +1,7 @@
 <?php
 
-class Conexao {
+class Conexao
+{
     private $servidor = "localhost";
     private $usuario = "root";
     private $senha = "";
@@ -13,7 +14,8 @@ class Conexao {
     // private $banco = "id4649026_ibav";
     // private $conexao;
 
-    public function __construct() {
+    public function __construct()
+    {
         try {
             $this->conexao = new PDO("mysql:host=$this->servidor;dbname=$this->banco", $this->usuario, $this->senha, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,8 +23,9 @@ class Conexao {
             echo "Erro na conexão: " . $e->getMessage();
         }
     }
-    
-    public function getConexao() {
+
+    public function getConexao()
+    {
         return $this->conexao;
     }
 }

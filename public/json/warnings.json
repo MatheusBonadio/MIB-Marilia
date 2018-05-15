@@ -1,0 +1,14 @@
+{
+  "403": {
+    "key": "403",
+    "text": "Permissão negada"
+  },
+  "404": {
+    "key": "404",
+    "text": "Página não encontrada"
+  },
+  "breve": {
+    "key": "Em breve",
+    "text": "Nosso site ainda está em construção, tenha paciência, <br>o dia sabático chegará logo"
+  }
+}

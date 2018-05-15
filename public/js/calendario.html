@@ -1,39 +1,55 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset = "utf-8" />
+	<meta charset="utf-8" />
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
 	<style>
-		.ui-datepicker{
+		.ui-datepicker {
 			font-family: Roboto;
 			font-size: 14px, 16px, 18px;
 		}
+
 		.ui-datepicker th {
 			font-size: 14px;
 			padding: 5px 0;
 		}
-		.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+
+		.ui-widget-content .ui-state-default,
+		.ui-widget-header .ui-state-default {
 			border: none;
 			background: #fff;
 			transition: .4s;
 		}
-		.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+
+		.ui-state-highlight,
+		.ui-widget-content .ui-state-highlight,
+		.ui-widget-header .ui-state-highlight {
 			background-color: transparent;
-		}.ui-state-default:hover,.ui-state-active:hover, .ui-widget-content .ui-state-highlight:hover{
+		}
+
+		.ui-state-default:hover,
+		.ui-state-active:hover,
+		.ui-widget-content .ui-state-highlight:hover {
 			background: #ccc;
 		}
+
 		.ui-widget-content .ui-state-highlight {
-			background-color: rgba(0,0,0,.08);
+			background-color: rgba(0, 0, 0, .08);
 		}
-		.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+
+		.ui-state-active,
+		.ui-widget-content .ui-state-active,
+		.ui-widget-header .ui-state-active {
 			border-radius: 3px;
 			background: #39F;
 			color: #fff;
 		}
+
 		.ui-datepicker-header {
 			background: #fff;
 			color: #000;
@@ -41,7 +57,8 @@
 			border: none;
 		}
 
-		.ui-datepicker td span, .ui-datepicker td a {
+		.ui-datepicker td span,
+		.ui-datepicker td a {
 			display: inline-block;
 			font-weight: bold;
 			text-align: center;
@@ -51,36 +68,33 @@
 			color: #fff;
 			border-radius: 3px;
 		}
-		.ui-datepicker-other-month .ui-priority-secondary{
-			color: rgba(0,0,0,.5);
+
+		.ui-datepicker-other-month .ui-priority-secondary {
+			color: rgba(0, 0, 0, .5);
 		}
-		.ui-datepicker-calendar td{
+
+		.ui-datepicker-calendar td {
 			text-align: center;
 		}
 	</style>
-	
-	
-	
+
+
+
 	<script>
 		$(function() {
-			$( "#inicio, #termino" ).datepicker({
+			$("#inicio, #termino").datepicker({
 				dateFormat: 'yy-mm-dd',
-				dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-				dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-				monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+				dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+				dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+				monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
 				showOtherMonths: true,
 				selectOtherMonths: true
 			});
 		});
 	</script>
-</head>	
+</head>
+
 <body>
 </body>
+
 </html>
-
-
-
-
-
-
-

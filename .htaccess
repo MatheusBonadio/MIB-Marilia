@@ -1,16 +1,23 @@
 Options +FollowSymLinks
-Options All -Indexes
+Options -Indexes
 
-DirectoryIndex /home.php
-ErrorDocument 404 /errors/404.php
-ErrorDocument 403 /errors/403.php
+ErrorDocument 403 /index.php?url=403
+ErrorDocument 404 /index.php?url=404
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{SCRIPT_FILENAME} !-d
-    RewriteRule ^home/?$ /home.php [NC]
-    RewriteRule ^lineup/?$ /pages/evento.php [NC]
+    RewriteRule ^([A-Za-z]+)/?$ index.php?url=$1 [NC]
+    RewriteRule ^evento/?$ index.php?url=breve [NC]
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/* A31536000
+    ExpiresByType text/* A31536000
+    ExpiresByType application/* A31536000
+    ExpiresByType font/* A31536000
 </IfModule>
 
 <Files ~ "^\.(htaccess|htpasswd)$">
@@ -21,7 +28,7 @@ ErrorDocument 403 /errors/403.php
     <FilesMatch "\.(js|css|jpg|png|gif|ico|php|html|htm|ttf)$">
         <ifModule mod_filter.c>
             SetOutputFilter DEFLATE
-            AddOutputFilterByType DEFLATE text/css text/javascript application/x-javascript text/html text/plain text/xml image/x-icon font/opentype font/truetype font/eot
+            AddOutputFilterByType DEFLATE text/* application/*  image/* font/*
         </IfModule>
     </FilesMatch>
 </IfModule>

@@ -1,0 +1,258 @@
+.container_audio {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  box-sizing: border-box;
+  padding: 0 var(--padding);
+  font: 300 15px Roboto;
+  color: #333;
+  box-shadow: 0 -13px 30px 2px rgba(0, 0, 0, .05);
+  animation: fon .4s linear;
+}
+
+@keyframes fon {
+  0% {
+    bottom: -60px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.audio_info {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.audio_img {
+  color: #fff;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.audio_img .loader_background {
+  background-color: rgba(255, 255, 255, .3);
+  width: 45px;
+  height: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s, visibility .2s;
+}
+
+.audio_img .loader {
+  width: 18px;
+  height: 18px;
+  border-width: 3px;
+  border-top-color: var(--color);
+}
+
+.audio_text {
+  width: calc(100% - 55px);
+  height: 100%;
+  margin-left: 12px;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio_text div:first-child {
+  font: 600 15px Dosis;
+  position: absolute;
+  top: 11px;
+  white-space: nowrap; //animation: marquee 2s linear alternate;
+}
+
+.audio_text div:last-child {
+  position: absolute;
+  top: 33px;
+  font: 400 12px Dosis;
+  letter-spacing: 1px;
+}
+
+@keyframes marquee {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+.play {
+  overflow: hidden;
+  min-width: 25px;
+  min-height: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.play div {
+  position: absolute;
+  top: 25px;
+  transition: .25s;
+}
+
+.play div:first-child {
+  top: 0;
+}
+
+.play.pause div:first-child, .play.mute div:first-child {
+  top: -25px;
+}
+
+.play.pause div:last-child, .play.mute div:last-child {
+  top: 0;
+}
+
+.rewind, .forward {
+  margin: 0 7px;
+  cursor: pointer;
+  font-size: 21px;
+}
+
+.audio_controls {
+  flex-grow: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.start_time, .end_time {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  color: var(--color);
+  letter-spacing: 1px;
+}
+
+.end_time {
+  justify-content: flex-start;
+  color: #333;
+  right: 0;
+}
+
+.progress_bar {
+  z-index: 2;
+  width: 100%;
+  position: relative;
+  height: 20px;
+  margin: 0 calc(15% + 10px);
+  cursor: pointer;
+}
+
+.progress_background {
+  border-radius: 7px;
+  width: 100%;
+  background-color: #cecece;
+  height: var(--sizeBar);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.progress_forward {
+  border-radius: 7px;
+  background-color: var(--color);
+  height: var(--sizeBar);
+  transition: width .15s;
+}
+
+.progress_slider {
+  opacity: 0;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color);
+  ;
+  left: -6px;
+  transition: opacity .2s, left .15s;
+}
+
+.progress_bar:hover .progress_slider {
+  opacity: 1;
+}
+
+.volume_controls {
+  flex-direction: column-reverse;
+  transition: opacity .2s;
+  position: relative;
+}
+
+.volume_container {
+  opacity: 0;
+  visibility: hidden;
+  width: 35px;
+  transition: opacity .4s, visibility .4s;
+  padding: 15px 0;
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  box-shadow: 0px 7px 14px 0px rgba(0, 0, 0, .15);
+  border: 1px solid #cecece;
+  margin-bottom: 10px;
+}
+
+.volume_container::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: #f2f2f2;
+}
+
+.volume_controls .progress_bar {
+  width: 20px;
+  height: 100px;
+  margin: 0;
+}
+
+.volume_controls .progress_background {
+  width: var(--sizeBar);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.volume_controls .progress_forward {
+  width: var(--sizeBar);
+  height: 0%;
+  transition: height .15s;
+}
+
+.volume_controls .progress_slider {
+  opacity: 1;
+  left: auto;
+  bottom: -6px;
+  transition: bottom .15s;
+}
+
+.volume_controls .play:hover+.volume_container, .volume_container:hover {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,185 @@
+.header {
+  background-color: transparent;
+}
+
+.header .default {
+  color: #fff;
+}
+
+.header .img {
+  background-image: url(/public/img/system/logo2.svg);
+}
+
+.small {
+  background-color: #fff;
+}
+
+.small .default {
+  color: #000;
+}
+
+.small .img {
+  background-image: url(/public/img/system/logo.svg);
+}
+
+.word_header {
+  width: 100%;
+  min-height: 470px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding: 0 var(--padding) 70px var(--padding);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.word_header .title {
+  width: 75%;
+  text-transform: uppercase;
+  color: #fff;
+  font: 700 48px Dosis;
+  letter-spacing: 2px;
+}
+
+.word_buttons {
+  display: flex;
+  position: absolute;
+  right: var(--padding);
+  bottom: 30px;
+}
+
+.button {
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 25px 35px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: background-color .5s, border-color .5s, color .5s;
+  letter-spacing: 1px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  transform: scale(0.9);
+  flex-direction: column;
+}
+
+.button:hover {
+  color: #4d545c;
+}
+
+.button::before {
+  content: '';
+  z-index: -1;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.button:hover::before {
+  height: 100%;
+}
+
+.button .material-icons {
+  font-size: 60px;
+}
+
+.button span {
+  white-space: nowrap;
+}
+
+.button span:nth-child(2) {
+  font: 700 19px Dosis;
+  margin: 6px 0;
+}
+
+.word_body {
+  width: 100%;
+  position: relative;
+  padding: 0 var(--padding);
+  box-sizing: border-box;
+  display: flex;
+}
+
+.word_content {
+  width: 75%;
+  flex-grow: 1;
+}
+
+.author {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.author .img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -45px;
+}
+
+.author .name {
+  padding-left: 95px;
+  font: 400 20px Dosis;
+  position: absolute;
+  top: -35px;
+  color: #fff;
+}
+
+.author .date {
+  color: #333;
+  padding-left: 95px;
+  font: 400 17px Dosis;
+}
+
+.word_text {
+  padding-top: 25px;
+  text-align: justify;
+  font: 300 16px Roboto;
+  line-height: 1.6;
+}
+
+.bible {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-style: italic;
+  background-image: ;
+  position: relative;
+}
+
+.bible .verse {
+  font-size: 11px;
+  vertical-align: super;
+}
+
+.word_text p {
+  margin-bottom: 10px;
+}
+
+.word_text h4 {
+  margin: 25px 0 10px 0;
+  font-weight: 500;
+}
+
+.content_side {
+  box-sizing: border-box;
+  margin: 68px 0 0 15px;
+  //border: 1px solid #e1e1e1;
+  border-radius: 2px;
+}

@@ -1,7 +1,7 @@
 <?php
 
-class Usuario {
-
+class Usuario
+{
     private $idUsuario;
     private $idEncargo;
     private $login;
@@ -18,123 +18,153 @@ class Usuario {
     private $rua;
     private $numero;
 
-    public function setIdUsuario($idUsuario){
+    public function setIdUsuario($idUsuario)
+    {
         $this->idUsuario = $idUsuario;
     }
 
-    public function getIdUsuario(){
-        return $this->idUsuario; 
+    public function getIdUsuario()
+    {
+        return $this->idUsuario;
     }
 
-    public function setIdEncargo($idEncargo){
+    public function setIdEncargo($idEncargo)
+    {
         $this->idEncargo = $idEncargo;
     }
 
-    public function getIdEncargo(){
-        return $this->idEncargo; 
+    public function getIdEncargo()
+    {
+        return $this->idEncargo;
     }
 
-    public function setLogin($login){
+    public function setLogin($login)
+    {
         $this->login = $login;
     }
 
-    public function getLogin(){
+    public function getLogin()
+    {
         return $this->login;
     }
 
-    public function setSenha($senha){
+    public function setSenha($senha)
+    {
         $this->senha = $senha;
     }
 
-    public function getSenha(){
+    public function getSenha()
+    {
         return $this->senha;
     }
 
-    public function setNome($nome){
+    public function setNome($nome)
+    {
         $this->nome = $nome;
     }
 
-    public function getNome(){
+    public function getNome()
+    {
         return $this->nome;
     }
 
-    public function setEmail($email){
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function getEmail(){
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function setCpf($cpf){
+    public function setCpf($cpf)
+    {
         $this->cpf = $cpf;
     }
 
-    public function getCpf(){
+    public function getCpf()
+    {
         return $this->cpf;
     }
 
-    public function setTelefone($telefone){
+    public function setTelefone($telefone)
+    {
         $this->telefone = $telefone;
     }
 
-    public function getTelefone(){
+    public function getTelefone()
+    {
         return $this->telefone;
     }
 
-    public function setAtivo($ativo){
+    public function setAtivo($ativo)
+    {
         $this->ativo = $ativo;
     }
 
-    public function getAtivo(){
+    public function getAtivo()
+    {
         return $this->ativo;
     }
 
-    public function setCep($cep){
+    public function setCep($cep)
+    {
         $this->cep = $cep;
     }
 
-    public function getCep(){
-        return $this->cep; 
+    public function getCep()
+    {
+        return $this->cep;
     }
 
-    public function setEstado($estado){
+    public function setEstado($estado)
+    {
         $this->estado = $estado;
     }
 
-    public function getEstado(){
-        return $this->estado; 
+    public function getEstado()
+    {
+        return $this->estado;
     }
 
-    public function setCidade($cidade){
+    public function setCidade($cidade)
+    {
         $this->cidade = $cidade;
     }
 
-    public function getCidade(){
-        return $this->cidade; 
+    public function getCidade()
+    {
+        return $this->cidade;
     }
 
-    public function setBairro($bairro){
+    public function setBairro($bairro)
+    {
         $this->bairro = $bairro;
     }
 
-    public function getBairro(){
-        return $this->bairro; 
+    public function getBairro()
+    {
+        return $this->bairro;
     }
 
-    public function setRua($rua){
+    public function setRua($rua)
+    {
         $this->rua = $rua;
     }
 
-    public function getRua(){
-        return $this->rua; 
+    public function getRua()
+    {
+        return $this->rua;
     }
 
-    public function setNumero($numero){
+    public function setNumero($numero)
+    {
         $this->numero = $numero;
     }
 
-    public function getNumero(){
-        return $this->numero; 
+    public function getNumero()
+    {
+        return $this->numero;
     }
 }
