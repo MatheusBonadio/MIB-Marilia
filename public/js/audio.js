@@ -90,19 +90,21 @@ function initVolumeBar() {
     if (evt.target.className == 'progress_forward') {
       var percent = (progressForward.height() - evt.offsetY) / progressBar.height();
       player.volume = percent;
-      player.currentTime = player.currentTime;
+      if(player.paused)
+        player.currentTime = player.currentTime;
     } else if (evt.target.className.indexOf('progress_slider') != 0) {
       var percent = (progressBar.height() - evt.offsetY) / progressBar.height();
       player.volume = percent;
-      player.currentTime = player.currentTime;
+      if(player.paused)
+        player.currentTime = player.currentTime;
     }
   }
 }
 
 function initPlayers() {
   var player = document.getElementById('player');
-  player.autoplay = true;
-  player.volume = 0;
+  //player.autoplay = true;
+  player.volume = 0.7;
   var playBtn = $('.play:eq(0)');
   var volumeBtn = $('.play:eq(1)');
   var rewind = $('.rewind');

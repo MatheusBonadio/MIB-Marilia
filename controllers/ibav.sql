@@ -2,16 +2,18 @@ create database ibav;
 
 use ibav;
 
-Create table usuario(
-	id_usuario Int NOT NULL AUTO_INCREMENT,
+Create table usuario (
+	id_usuario Int NOT NULL,
 	id_encargo Int NOT NULL DEFAULT 1,
 	login Varchar(20) NOT NULL,
 	senha Varchar(32) NOT NULL,
 	nome Varchar(80) NOT NULL,
 	email Varchar(70) NOT NULL,
 	cpf Varchar(14) NOT NULL,
+	genero Char(1) NOT NULL,
 	telefone Varchar(15) NOT NULL,
-	ativo Bit(1) NOT NULL DEFAULT 0,
+	foto Varchar(32) DEFAULT default.png,
+	ativo Bit(1) DEFAULT 0,
 	cep Varchar(8),
 	estado Varchar(2),
 	cidade Varchar(50),
@@ -61,4 +63,14 @@ Create table encargo (
 	id_encargo Int NOT NULL AUTO_INCREMENT,
 	nome Varchar(30) NOT NULL,
  	Primary Key (id_encargo)
+);
+
+Create table palavra (
+	id_palavra Int NOT NULL,
+	id_lider Int NOT NULL,
+	titulo Varchar(150) NOT NULL,
+	texto Text NOT NULL,
+	data Date NOT NULL,
+	audio Varchar(150),
+ 	Primary Key (id_palavra)
 );

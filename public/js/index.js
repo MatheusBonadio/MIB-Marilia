@@ -3,7 +3,7 @@ var currentHead;
 function select_head(n) {
   var path = last_word();
   var sites = ['home', 'eventos', 'palavras', 'celulas', 'igreja', 'login'];
-  var url = '/pages/' + sites[n] + '.php';
+  var url = '/views/pages/' + sites[n] + '.php';
   if (path != sites[n]) {
     currentHead = false;
     $.ajax({

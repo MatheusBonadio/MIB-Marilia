@@ -8,6 +8,7 @@ ErrorDocument 404 /index.php?url=404
     RewriteEngine On
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteRule ^favicon.ico$ /public/img/system/favicon.ico [NC]
     RewriteRule ^([A-Za-z]+)/?$ index.php?url=$1 [NC]
     RewriteRule ^evento/?$ index.php?url=breve [NC]
 </IfModule>

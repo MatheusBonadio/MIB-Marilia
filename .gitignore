@@ -1,5 +1,3 @@
 public/img/culto/[^.]*
 public/audio/[^.]*
-example/
-fon/
-test.php
+tests/

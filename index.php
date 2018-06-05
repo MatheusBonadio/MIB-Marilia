@@ -1,14 +1,14 @@
 <?php
     $url = (isset($_GET['url'])) ? $_GET['url']:'home';
-    $url = $_SERVER['DOCUMENT_ROOT'].'/pages/'.$url.'.php';
+    $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/'.$url.'.php';
     if (!file_exists($url)) {
         $url = (isset($_GET['url'])) ? $_GET['url']:'404';
         if ($url=='403') {
             $errorKey = '403';
-            $url = $_SERVER['DOCUMENT_ROOT'].'/pages/warning.php';
+            $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/warning.php';
         } else {
             $errorKey = '404';
-            $url = $_SERVER['DOCUMENT_ROOT'].'/pages/warning.php';
+            $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/warning.php';
         }
     }
 ?>
@@ -20,7 +20,7 @@
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=0.6, maximum-scale=0.6' name='viewport' />
     <title>IBAV Marília | Igreja Batista Água Viva de Marília</title>
-    <link rel='shortcut icon' href='/public/img/system/icon.png' type='image/x-icon'>
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>
     <link rel='stylesheet' href='/public/css/font.css' type='text/css'>
     <link rel='stylesheet' href='/public/css/index.css' type='text/css'>
 </head>
