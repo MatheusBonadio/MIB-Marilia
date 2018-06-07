@@ -69,7 +69,55 @@ $(document).on('scroll', function() {
 });
 
 $('#back_top').click(function() {
+  console.log('xd');
   $('html, body').animate({
     scrollTop: 0
   }, 'slow');
 });
+
+function initMap() {
+  var center = {
+    lat: -22.181720,
+    lng: -49.960683
+  }
+  var local = {
+    lat: -22.181920,
+    lng: -49.960683
+  };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: center,
+    scrollwheel: false,
+    streetViewControl: false,
+    mapTypeControl: false,
+    fullscreenControl: false,
+    styles: [{
+      "featureType": "administrative",
+      "elementType": "geometry",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    }, {
+      "featureType": "poi",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    }, {
+      "featureType": "road",
+      "elementType": "labels.icon",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    }, {
+      "featureType": "transit",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    }]
+  });
+  var marker = new google.maps.Marker({
+    position: local,
+    map: map,
+    icon: '/public/img/system/marker-small.png'
+  });
+}

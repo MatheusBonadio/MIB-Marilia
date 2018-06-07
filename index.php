@@ -16,13 +16,13 @@
 <html lang='pt-br'>
 <head>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <meta name='theme-color' content='#fff'>
-    <meta charset='UTF-8'>
-    <meta content='width=device-width, initial-scale=0.6, maximum-scale=0.6' name='viewport' />
+    <meta name='theme-color' content='#fff' />
+    <meta charset='UTF-8' />
+    <meta content='width=device-width, initial-scale=0.6' name='viewport' />
     <title>IBAV Marília | Igreja Batista Água Viva de Marília</title>
-    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>
-    <link rel='stylesheet' href='/public/css/font.css' type='text/css'>
-    <link rel='stylesheet' href='/public/css/index.css' type='text/css'>
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+    <link rel='stylesheet' href='/public/css/font.css' type='text/css' />
+    <link rel='stylesheet' href='/public/css/index.css' type='text/css' />
 </head>
 
 <body>
@@ -50,6 +50,6 @@
 
     <div class='content'><?php include($url) ?></div>
 
-    <?php include('audio.php') ?>
+    <?php //include('audio.php')?>
 
-    <?php //include('footer.php')?>
+    <?php include('footer.php') ?>

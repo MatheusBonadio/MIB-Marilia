@@ -54,17 +54,15 @@
         <div class='arrow flex' onclick='plusSlides(-1)'>
             <div class='sprite'></div>
         </div>
+        <div class='line'></div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <script>
         var slides = $('.slide_img');
         for(i = 0; i < slides.length; i++){
-            var div = $('<div class=\'dots\' onclick=\'currentSlide('+(i+1)+')\'></div>');
-            $('.group_dots').append(div);
+          var div = $('<div class=\'dots\' onclick=\'currentSlide('+(i+1)+')\'></div>');
+          $('.group_dots').append(div);
         }
-    </script>
-    <script>
         var url = "/public/js/home.js";
         $.getScript(url);
         slider($(".header a:eq(1)"))

@@ -1,41 +1,40 @@
-	<div class='footer'>
-		<div class='footer_body'>
-			<div class='footer_block'>
-				<label>Solicitar administração</label>
-				<label>Informe seu email para solicitar a administração de um torneio no nossso site para entrarmos em contato.</label>
-				<form>
-					<input type='email' nome='email' placeholder='Digite seu email' required/>
-					<input type='submit' value='ENVIAR' />
-				</form>
-			</div>
-			<div class='footer_block'>
-				<label>Sobre nós</label>
-				<label>Estudantes da Etec Antonio Devisate do Ensino Técnico de Informática Integrado ao Médio, com o anseio de dominar o mundo dos esportes a partir de sua aplicação Web.</label>
-			</div>
-			<div class='footer_block'>
-				<label>Redes Sociais</label>
-				<div class='media'>
-					<div class='social'></div>
-					<div class='social'></div>
-					<div class='social'></div>
+		<script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBDUOci_EaMCgBXUv4L3XOXSEBmWrt7Zsk&callback=initMap'></script>
+
+		<div class='footer'>
+				<div class='top'>
+						<div class='block'>
+								<div class='title'>Pastor Senior</div>
+								<div class='body'>
+										<div class='img'></div>
+										<p>Pr. Darcio Gonçalves</p>
+								</div>
+						</div>
+						<div class='block'>
+								<div class='title'>Visite a IBAV Marília</div>
+								<div class='body'>
+										<div id='map'></div>
+										<strong>Culto todo domingo as 19h</strong>
+										<p>Rua Ninfa Pietraroia, 628 – Palmital – Marília – SP</p>
+										<p>E-mail: aguavivamarilia@outlook.com</p>
+								</div>
+						</div>
+						<div class='block'>
+								<div class='title'>Curta nossa página</div>
+								<div class='body'>
+										<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faguavivamarilia%2F&tabs&width=340&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+								</div>
+						</div>
 				</div>
-			</div>
-			<div class='footer_block'>
-				<label>Voltar ao topo</label>
-				<div class='button material-icons flex' id='back_top'>arrow_upward</div>
-			</div>
+				<div class='mid'>
+						<span>© 2018 IGREJA BATISTA ÁGUA VIVA DE MARÍLIA. TODOS OS DIREITOS RESERVADOS.</span>
+						<div class='img'></div>
+				</div>
+				<div class='dev flex'>Front e Back-end: Matheus Lima Bonadio</div>
 		</div>
-		<div class='footer_copy'>
-			© Copyright 2017 - Sinp Sports - Todos os direitos reservados
-		</div>
-		<!-- <div class='footer_body flex'>
-			© Copyright 2017 - Sinp Sports - Todos os direitos reservados
-		</div> -->
-	</div>
-	<script>
-		$("#back_top").click(function() {
-		  $('html, body').animate({scrollTop:0}, 'slow');
-		});
-	</script>
+		<script>
+				$("#back_top").click(function() {
+				  	$('html, body').animate({scrollTop:0}, 'slow');
+				});
+		</script>
 </body>
 </html>

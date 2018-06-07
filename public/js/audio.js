@@ -1,3 +1,11 @@
+$(document).on('scroll', function() {
+  if ($(document).scrollTop() < 50) {
+    $('.header').removeClass('small');
+  } else {
+    $('.header').addClass('small');
+  }
+});
+
 function calculateTotalValue(length) {
   var hours = parseInt(length / 3600) % 24,
     minutes = parseInt(length / 60) % 60,
@@ -90,12 +98,12 @@ function initVolumeBar() {
     if (evt.target.className == 'progress_forward') {
       var percent = (progressForward.height() - evt.offsetY) / progressBar.height();
       player.volume = percent;
-      if(player.paused)
+      if (player.paused)
         player.currentTime = player.currentTime;
     } else if (evt.target.className.indexOf('progress_slider') != 0) {
       var percent = (progressBar.height() - evt.offsetY) / progressBar.height();
       player.volume = percent;
-      if(player.paused)
+      if (player.paused)
         player.currentTime = player.currentTime;
     }
   }

@@ -1,3 +1,7 @@
+:root {
+  --viewWidth: calc(100vh - 60px);
+}
+
 .container_audio {
   position: fixed;
   bottom: 0;
@@ -255,4 +259,8 @@
 .volume_controls .play:hover+.volume_container, .volume_container:hover {
   visibility: visible;
   opacity: 1;
+}
+
+.footer {
+  margin-bottom: 60px;
 }

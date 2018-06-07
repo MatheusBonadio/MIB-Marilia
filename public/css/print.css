@@ -1,0 +1,62 @@
+@media print {
+  @page {
+    margin: 2cm 1.5cm;
+  }
+}
+
+h1 {
+  font: 700 25px Arial;
+}
+
+.bible, .word_text p {
+  margin-bottom: 10px
+}
+
+.word_text p:last-child {
+  margin-bottom: 0;
+}
+
+.word_text {
+  text-align: justify;
+  font: 300 16px Roboto;
+  line-height: 1.6
+}
+
+.bible {
+  padding: 3px 0 3px 20px;
+  box-sizing: border-box;
+  font-style: italic;
+  position: relative
+}
+
+.bible .verse {
+  font-size: 11px;
+  vertical-align: super
+}
+
+.word_content .line {
+  width: 100%;
+  height: 1px;
+  margin: 25px 0;
+  background-color: #bdbdbd
+}
+
+.share {
+  visibility: hidden
+}
+
+.author {
+  display: flex;
+  font-family: Arial;
+}
+
+.author div:nth-child(2)::after {
+  content: "–";
+  margin: 0 7px;
+}
+
+.word_text h4 {
+  margin: 25px 0 10px 0;
+  font: 500 16px Roboto;
+  color: #363636;
+}

@@ -35,23 +35,32 @@ if (dots.length > 1) {
       showSlides(slideIndex = n);
   }
 
-  function reset(n) {
+  function reset(toggle) {
     var slide_play = $('.slide_play');
+    var line = $('.line');
+
     window.clearInterval(timer);
-    if (n) {
+    if (toggle) {
       timer = window.setInterval('plusSlides(1)', 5000);
       disable = false;
       slide_play.eq(0).css('opacity', '1');
       slide_play.eq(1).css('opacity', '.6');
+      line.removeClass("pause");
+      line.removeClass("animation_line");
+      line.outerWidth();
+      line.addClass("animation_line");
     } else {
       disable = true;
       slide_play.eq(0).css('opacity', '.6');
       slide_play.eq(1).css('opacity', '1');
+      line.addClass('pause');
     }
   }
 
   function showSlides(n) {
     var button = $('.slide_button');
+    var line = $('.line');
+
     reset(true);
     if (n > slides.length) {
       slideIndex = 1
