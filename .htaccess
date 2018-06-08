@@ -1,8 +1,8 @@
 Options +FollowSymLinks
 Options -Indexes
 
-ErrorDocument 403 /index.php?url=403
 ErrorDocument 404 /index.php?url=404
+ErrorDocument 403 /index.php?url=403
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -10,7 +10,6 @@ ErrorDocument 404 /index.php?url=404
     RewriteCond %{SCRIPT_FILENAME} !-d
     RewriteRule ^favicon.ico$ /public/img/system/favicon.ico [NC]
     RewriteRule ^([A-Za-z]+)/?$ index.php?url=$1 [NC]
-    RewriteRule ^evento/?$ index.php?url=breve [NC]
 </IfModule>
 
 <IfModule mod_expires.c>

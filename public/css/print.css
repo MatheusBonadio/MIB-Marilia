@@ -26,12 +26,18 @@ h1 {
   padding: 3px 0 3px 20px;
   box-sizing: border-box;
   font-style: italic;
-  position: relative
+  position: relative;
+  font-family: Georgia;
+  color: #363636;
 }
 
 .bible .verse {
   font-size: 11px;
   vertical-align: super
+}
+
+.bible p:first-child {
+  font-size: 18px;
 }
 
 .word_content .line {

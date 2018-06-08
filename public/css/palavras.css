@@ -96,18 +96,55 @@
   line-height: 1.6;
 }
 
+u {
+  box-shadow: inset 0 -0.05em #7d7d7d;
+}
+
 .bible {
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 17px 45px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 19px;
+  font-family: Lora;
   font-style: italic;
-  background-image: ;
   position: relative;
+  color: #363636;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #bbb;
+}
+
+.bible p:first-child {
+  font-size: 18px;
+  color: #000;
+  position: relative;
+}
+
+.bible p:first-child::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  height: 1px;
+  margin-left: 15px;
+  background-color: #bbb;
 }
 
 .bible .verse {
   font-size: 11px;
   vertical-align: super;
+}
+
+.bible::before {
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  content: '\201C';
+  font-size: 65px;
+  color: rgba(0, 0, 0, .3);
+  font-weight: bold;
+  font-family: Georgia;
 }
 
 .word_text p {
@@ -128,7 +165,7 @@
   width: 100%;
   height: 1px;
   margin: 25px 0;
-  background-color: #bdbdbd;
+  background-color: #bbb;
 }
 
 .share {
@@ -172,7 +209,7 @@
 }
 
 .content_side {
-  min-width: 21%;
+  min-width: 23%;
   box-sizing: border-box;
   margin: 43px 0 0 30px;
   /* border: 1px solid #e1e1e1;
@@ -252,6 +289,7 @@
 
 .button .vertical span {
   white-space: nowrap;
+  font-size: 12px;
 }
 
 .button .vertical span:nth-child(1) {

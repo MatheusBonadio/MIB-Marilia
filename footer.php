@@ -3,25 +3,27 @@
 		<div class='footer'>
 				<div class='top'>
 						<div class='block'>
-								<div class='title'>Pastor Senior</div>
+								<div class='title'>Pastores</div>
 								<div class='body'>
 										<div class='img'></div>
-										<p>Pr. Darcio Gonçalves</p>
+										<p><strong>Pastor Senior: </strong>Darcio Gonçalves</p>
+										<p><strong>Pastor rede Família: </strong>Willians Durso</p>
+										<p><strong>Pastor rede Jovens: </strong>João Roberto</p>
 								</div>
 						</div>
 						<div class='block'>
 								<div class='title'>Visite a IBAV Marília</div>
 								<div class='body'>
 										<div id='map'></div>
-										<strong>Culto todo domingo as 19h</strong>
-										<p>Rua Ninfa Pietraroia, 628 – Palmital – Marília – SP</p>
+										<strong>Rua Ninfa Pietraroia, 628 – Palmital – Marília – SP</strong>
 										<p>E-mail: aguavivamarilia@outlook.com</p>
+										<p>Culto todo domingo as 19h</p>
 								</div>
 						</div>
 						<div class='block'>
 								<div class='title'>Curta nossa página</div>
 								<div class='body'>
-										<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faguavivamarilia%2F&tabs&width=340&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+										<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faguavivamarilia%2F&tabs&width=357&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="357" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 								</div>
 						</div>
 				</div>

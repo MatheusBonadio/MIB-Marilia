@@ -169,7 +169,6 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
-  z-index: 3;
   bottom: 25px;
   width: 100%;
 }
