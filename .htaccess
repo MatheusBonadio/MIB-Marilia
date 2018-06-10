@@ -8,8 +8,9 @@ ErrorDocument 403 /index.php?url=403
     RewriteEngine On
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{SCRIPT_FILENAME} !-d
-    RewriteRule ^favicon.ico$ /public/img/system/favicon.ico [NC]
     RewriteRule ^([A-Za-z]+)/?$ index.php?url=$1 [NC]
+    RewriteRule ^favicon.ico$ /public/img/system/favicon.ico [NC]
+    RewriteRule ^palavras/?([A-Za-z0-9-]+)/?$ index.php?url=palavra&titulo=$1 [NC]
 </IfModule>
 
 <IfModule mod_expires.c>

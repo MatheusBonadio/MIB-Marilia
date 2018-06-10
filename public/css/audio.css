@@ -1,10 +1,6 @@
-:root {
-  --viewWidth: calc(100vh - 60px);
-}
-
 .container_audio {
   position: fixed;
-  bottom: 0;
+  bottom: -60px;
   background-color: #fff;
   width: 100vw;
   height: 60px;
@@ -18,10 +14,14 @@
   font: 300 15px Roboto;
   color: #333;
   box-shadow: 0 -13px 30px 2px rgba(0, 0, 0, .05);
-  animation: fon .4s linear;
 }
 
-@keyframes fon {
+.show_audio {
+  animation: show_audio .4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show_audio {
   0% {
     bottom: -60px;
   }
@@ -262,6 +262,6 @@
   opacity: 1;
 }
 
-.footer {
+.show_audio~.footer {
   margin-bottom: 60px;
 }

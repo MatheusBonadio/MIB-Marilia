@@ -143,3 +143,20 @@ window.fbAsyncInit = function() {
   js.src = "https://connect.facebook.net/en_US/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+var currentAudio;
+
+function select_audio(audio) {
+  if (currentAudio != audio) {
+    var container_audio = $('.container_audio');
+    var player = document.getElementById('player');
+    player.src = '/public/audio/' + audio;
+    if (!container_audio.hasClass('show_audio')) {
+      container_audio.addClass('show_audio');
+      $('body').css('--viewWidth', 'calc(100vh - 60px)');
+    } else {
+      $('body').css('--viewWidth', '100vh');
+    }
+    currentAudio = audio;
+  }
+}

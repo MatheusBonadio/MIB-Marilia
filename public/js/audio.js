@@ -14,6 +14,7 @@ function calculateTotalValue(length) {
     var time = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
   else
     var time = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
   return time;
 }
 
@@ -54,7 +55,8 @@ function initProgressBar() {
     });
   };
 
-  $(".end_time").html(remaining_time);
+  if (remaining_time.indexOf('NaN'))
+    $(".end_time").html(remaining_time);
 
   var currentTime = calculateCurrentValue(current_time, totalLength);
   $(".start_time").html(currentTime);
@@ -111,7 +113,8 @@ function initVolumeBar() {
 
 function initPlayers() {
   var player = document.getElementById('player');
-  //player.autoplay = true;
+  player.load();
+  player.autoplay = true;
   player.volume = 0.7;
   var playBtn = $('.play:eq(0)');
   var volumeBtn = $('.play:eq(1)');

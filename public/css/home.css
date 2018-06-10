@@ -1,5 +1,5 @@
 .slideshow {
-  height: var(--viewWidth);
+  height: calc(var(--viewWidth) + 1px);
   width: 100%;
   min-height: 550px;
   max-height: 1024px;
@@ -207,7 +207,7 @@
 .slideshow .line {
   background-color: rgba(255, 255, 255, .8);
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   width: 0;
   height: 3px;
 }
@@ -227,4 +227,58 @@
 
 .pause {
   animation-play-state: paused;
+}
+
+.mission {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  padding: 0 calc(var(--padding) - 11px) 17px calc(var(--padding) - 11px);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.block_mission {
+  width: 33%;
+  flex-grow: 1;
+  margin: 22px 12.5px 5px 12.5px;
+}
+
+.block_mission .block_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  letter-spacing: 3px;
+  font: 500 15px Dosis;
+  text-transform: uppercase;
+  color: #5b5b5b;
+}
+
+.block_mission .block_header .material-icons {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #0093d0;
+  margin-right: 12px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.block_mission .body {
+  text-align: left;
+  color: #797979;
+  font: 300 14px Roboto;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:800px) {
+  .mission{
+    flex-direction: column;
+  }
+  .block_mission {
+    width: auto;
+  }
 }

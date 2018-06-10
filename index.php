@@ -19,6 +19,29 @@
             $parse_url = 'Error '.$errorKey;
         }
     }
+
+    require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
+    $dao = new PalavraDAO();
+    $exec = $dao->listar();
+
+    $palavraExiste = false;
+
+    if ($parse_url == 'palavra') {
+        if (isset($_GET['titulo'])) {
+            foreach ($exec as $listar) {
+                if ($dao->formatarTitulo($listar["titulo"]) == $_GET["titulo"]) {
+                    $parse_url = $listar["titulo"];
+                    $palavraExiste = true;
+                }
+            }
+        }
+    }
+
+    if (!$palavraExiste) {
+        $errorKey = '404';
+        $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/warning.php';
+        $parse_url = 'Error '.$errorKey;
+    }
 ?>
 <!DOCTYPE html>
 <html lang='pt-br'>
@@ -58,7 +81,7 @@
 
     <div class='content'><?php include($url) ?></div>
 
-    <?php //include('audio.php')?>
+    <?php include('audio.php') ?>
 
     <?php include('footer.php') ?>
 

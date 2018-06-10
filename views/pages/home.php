@@ -56,6 +56,35 @@
         </div>
         <div class='line'></div>
     </div>
+    <div class='mission'>
+        <div class='block_mission'>
+            <div class='block_header'>
+                <div class='material-icons'>people</div>
+                <span>Quem Somos</span>
+            </div>
+            <div class='body'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </div>
+        </div>
+        <div class='block_mission'>
+            <div class='block_header'>
+                <div class='material-icons'>flag</div>
+                <span>Missão</span>
+            </div>
+            <div class='body'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </div>
+        </div>
+        <div class='block_mission'>
+          <div class='block_header'>
+            <div class='material-icons'>remove_red_eye</div>
+            <span>Visão</span>
+          </div>
+          <div class='body'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </div>
+    </div>
 
     <script>
         var slides = $('.slide_img');

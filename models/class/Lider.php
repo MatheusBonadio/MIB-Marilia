@@ -3,8 +3,8 @@
 class Lider
 {
     private $idLider;
-    private $idEncargo;
     private $idUsuario;
+    private $idEncargo;
     private $nome;
     private $rede;
 
@@ -18,16 +18,6 @@ class Lider
         return $this->idLider;
     }
 
-    public function setIdEncargo($idEncargo)
-    {
-        $this->idEncargo = $idEncargo;
-    }
-
-    public function getIdEncargo()
-    {
-        return $this->idEncargo;
-    }
-
     public function setIdUsuario($idUsuario)
     {
         $this->idUsuario = $idUsuario;
@@ -38,6 +28,15 @@ class Lider
         return $this->idUsuario;
     }
 
+    public function setIdEncargo($idEncargo)
+    {
+        $this->idEncargo = $idEncargo;
+    }
+
+    public function getIdEncargo()
+    {
+        return $this->idEncargo;
+    }
     public function setNome($nome)
     {
         $this->nome = $nome;

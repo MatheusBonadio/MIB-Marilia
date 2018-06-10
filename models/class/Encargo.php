@@ -4,6 +4,7 @@ class Encargo
 {
     private $idEncargo;
     private $nome;
+    private $sigla;
 
     public function setIdEncargo($idEncargo)
     {
@@ -23,5 +24,15 @@ class Encargo
     public function getNome()
     {
         return $this->nome;
+    }
+
+    public function setSigla($sigla)
+    {
+        $this->sigla = $sigla;
+    }
+
+    public function getSigla()
+    {
+        return $this->sigla;
     }
 }

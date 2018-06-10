@@ -1,67 +1,71 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT']."/controllers/class/Conexao.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/controllers/class/Lider.php";
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/class/Conexao.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/models/class/Lider.php';
 
-class LiderDAO{
+class LiderDAO
+{
+    private $con;
 
-	private $con;
+    public function __construct()
+    {
+        $conexao = new Conexao();
+        $this->con = $conexao->getConexao();
+    }
 
-	public function __construct(){
-		$conexao = new Conexao();
-		$this->con = $conexao->getConexao();
-	}	
-
-	public function inserir($preletor){
-		$sql = 'INSERT INTO preletor(nome, igreja, pastor) VALUES(:nomeEvento, :dataInicio, :dataTermino, :horaInicio)';
-		$prep = $this->con->prepare($sql);
-		$prep->bindValue(':nomeEvento', $preletor->getNomeEvento());
-		$prep->bindValue(':dataInicio', $preletor->getDataInicio());
-		$prep->bindValue(':dataTermino', $preletor->getDataTermino());
-		$prep->execute();
-	}
-
-	public function listar(){
-		$sql = 'SELECT * FROM evento ORDER BY data_inicio';
-		$prep = $this->con->prepare($sql);
-		$prep->execute();
-		$exec = $prep->fetchAll(PDO::FETCH_ASSOC);
-		return $exec;
-	}
-
-	public function alterar($evento){
-		$sql = 'UPDATE evento SET nome_evento = :nomeEvento, data_inicio = :dataInicio, data_termino = :dataTermino, hora_inicio = :horaInicio WHERE id_evento = :idEvento';
-		$prep = $this->con->prepare($sql);
-		$prep->bindValue(':idEvento', $evento->getIdEvento());
-		$prep->bindValue(':nomeEvento', $evento->getNomeEvento());
-		$prep->bindValue(':dataInicio', $evento->getDataInicio());
-		$prep->bindValue(':dataTermino', $evento->getDataTermino());
-		$prep->bindValue(':horaInicio', $evento->getHoraInicio());
-		$prep->execute();
-	}
-
-	public function consultar($codigo){
-		$sql = "SELECT * FROM evento WHERE id_evento = :idEvento";
+    public function inserir($lider)
+    {
+        $sql = 'INSERT INTO lider(id_encargo, nome) VALUES(:idEncargo, :nome)';
         $prep = $this->con->prepare($sql);
-        $prep->bindValue(':idEvento', $codigo);
+        $prep->bindValue(':idEncargo', $lider->getIdEncargo());
+        $prep->bindValue(':nome', $lider->getNome());
         $prep->execute();
-        $evento = new Usuario();
+    }
+
+    public function listar()
+    {
+        $sql = 'SELECT * FROM lider';
+        $prep = $this->con->prepare($sql);
+        $prep->execute();
+        $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
+        return $exec;
+    }
+
+    public function alterar($lider)
+    {
+        $sql = 'UPDATE lider SET id_usuario = :idUsuario, id_encargo = :idEncargo, nome = :nome, rede = :rede WHERE id_lider = :idLider';
+        $prep = $this->con->prepare($sql);
+        $prep->bindValue(':idLider', $lider->getIdLider());
+        $prep->bindValue(':idUsuario', $lider->getIdUsuario());
+        $prep->bindValue(':idEncargo', $lider->getIdEncargo());
+        $prep->bindValue(':nome', $lider->getNome());
+        $prep->bindValue(':rede', $lider->getRede());
+        $prep->execute();
+    }
+
+    public function consultar($codigo)
+    {
+        $sql = 'SELECT * FROM lider WHERE id_lider = :idLider';
+        $prep = $this->con->prepare($sql);
+        $prep->bindValue(':idLider', $codigo);
+        $prep->execute();
+        $lider = new Lider();
         $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
         foreach ($exec as $linha) {
-        	$evento->setIdEvento($linha['id_evento']);
-        	$evento->setNomeEvento($linha['nome_evento']);
-	        $evento->setDataInicio($linha['data_inicio']);
-	        $evento->setDataTermino($linha['data_termino']);
-	        $evento->setHoraInicio($linha['hora_inicio']);
+            $lider->setIdLider($linha['id_lider']);
+            $lider->setIdUsuario($linha['id_usuario']);
+            $lider->setIdEncargo($linha['id_encargo']);
+            $lider->setNome($linha['nome']);
+            $lider->setRede($linha['rede']);
         }
-        return $evento;
-	}
+        return $lider;
+    }
 
-	public function excluir($codigo){
-		$sql = "DELETE FROM evento WHERE id_evento = :idEvento";
+    public function excluir($codigo)
+    {
+        $sql = 'DELETE FROM lider WHERE id_lider = :idLider';
         $prep = $this->con->prepare($sql);
-        $prep->bindValue(':idEvento', $codigo);
+        $prep->bindValue(':idLider', $codigo);
         $prep->execute();
-	}
-
+    }
 }
