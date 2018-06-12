@@ -84,6 +84,7 @@ if (dots.length > 1) {
   showSlides(slideIndex);
 
 } else {
+  $('.slide_img').addClass('slide_fade');
   $('.container_dots').css('display', 'none');
   $('.arrow').css('display', 'none');
 }

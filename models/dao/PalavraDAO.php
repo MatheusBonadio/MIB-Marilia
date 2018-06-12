@@ -27,7 +27,7 @@ class PalavraDAO
 
     public function listar()
     {
-        $sql = 'SELECT * FROM palavra ORDER BY data';
+        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada FROM palavra ORDER BY data desc';
         $prep = $this->con->prepare($sql);
         $prep->execute();
         $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
@@ -91,7 +91,7 @@ class PalavraDAO
 
     public function listarId($codigo)
     {
-        $sql = 'SELECT *,
+        $sql = 'SELECT *, DATE_FORMAT(data, "%d de %M de %Y") as data_formatada,
         (SELECT sigla FROM encargo WHERE palavra.id_lider = lider.id_lider AND encargo.id_encargo = lider.id_encargo) AS sigla
         FROM palavra, lider WHERE id_palavra = :idPalavra AND lider.id_lider = palavra.id_lider';
         $prep = $this->con->prepare($sql);

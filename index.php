@@ -29,18 +29,19 @@
     if ($parse_url == 'palavra') {
         if (isset($_GET['titulo'])) {
             foreach ($exec as $listar) {
-                if ($dao->formatarTitulo($listar["titulo"]) == $_GET["titulo"]) {
-                    $parse_url = $listar["titulo"];
+                if ($dao->formatarTitulo($listar['titulo']) == $_GET['titulo']) {
+                    $parse_url = $listar['titulo'];
+                    $_GET['id_palavra'] = $listar['id_palavra'];
                     $palavraExiste = true;
                 }
             }
         }
-    }
 
-    if (!$palavraExiste) {
-        $errorKey = '404';
-        $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/warning.php';
-        $parse_url = 'Error '.$errorKey;
+        if (!$palavraExiste) {
+            $errorKey = '404';
+            $url = $_SERVER['DOCUMENT_ROOT'].'/views/pages/warning.php';
+            $parse_url = 'Error '.$errorKey;
+        }
     }
 ?>
 <!DOCTYPE html>

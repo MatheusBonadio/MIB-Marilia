@@ -7,6 +7,8 @@
 
 		<div class='container'>
 				<?php foreach ($exec as $listar) {?>
-						<a href='/palavras/<?php echo $dao->formatarTitulo($listar['titulo']) ?>'><?php echo $listar['titulo']?></a>
+						<a onclick='select_word("<?php echo $listar['titulo'] ?>","<?php echo $dao->formatarTitulo($listar['titulo']) ?>", "<?php echo $listar['id_palavra'] ?>")'><?php echo $listar['titulo']?></a><br>
 				<?php } ?>
 		</div>
+
+		<script>slider($(".header a:eq(3)"))</script>

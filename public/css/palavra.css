@@ -1,5 +1,6 @@
 .header {
   background-color: transparent;
+  box-shadow: none;
 }
 
 .header .default {
@@ -12,6 +13,7 @@
 
 .small {
   background-color: #fff;
+  box-shadow: 0 2px 30px 2px rgba(0, 0, 0, .05);
 }
 
 .small .default {
@@ -214,7 +216,7 @@ u {
 }
 
 .share .material-icons:hover {
-  background-color: #ea4335;
+  background-color: #a66262;
 }
 
 .content_side {

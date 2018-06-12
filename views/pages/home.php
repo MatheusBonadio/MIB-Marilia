@@ -1,48 +1,30 @@
+    <?php
+        require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
+        $dao = new PalavraDAO();
+        $palavra = $dao->listar();
+    ?>
     <link rel='stylesheet' href='/public/css/home.css' type='text/css'>
 
     <div class='slideshow'>
-        <div class='slide_img' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 100%), url(/public/img/culto/ideas.png);'>
+        <?php foreach($palavra as $listar){ ?>
+        <div class='slide_img' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 100%), url(/public/img/culto/<?php echo $listar['img'] ?>);'>
             <div class='shadow'></div>
             <div class='slide_position'>
-                <div class='slide_date'>27/05/2018</div>
+                <div class='slide_date'><?php echo $listar['data_formatada'] ?></div>
                 <div class='slide_title'>
-                    <span>A posição cristã em</span>
-                    <div class='subtitle'>meio ao caos</div>
+                    <?php echo $listar['titulo_dividido'] ?>
                 </div>
-                <a class='slide_button flex'>
+                <a class='slide_button flex' onclick='select_word("<?php echo $listar['titulo'] ?>","<?php echo $dao->formatarTitulo($listar['titulo']) ?>", "<?php echo $listar['id_palavra'] ?>")'>
+                    <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$dao->formatarTitulo($listar['titulo']).'.mp3')) {?>
                     <div class='material-icons flex'>headset</div>
+                  <?php } else {?>
+                    <div class='material-icons flex'>file_copy</div>
+                  <?php } ?>
                     <span>Acesse agora</span>
                 </a>
             </div>
         </div>
-        <div class='slide_img' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 100%), url(/public/img/culto/sun.jpeg);'>
-            <div class='shadow'></div>
-            <div class='slide_position'>
-                <div class='slide_date'>13/05/2018</div>
-                <div class='slide_title'>
-                    <span>Paixão pela</span>
-                    <div class='subtitle'>Glória de deus</div>
-                </div>
-                <a class='slide_button flex'>
-                    <div class='material-icons flex'>headset</div>
-                    <span>Acesse agora</span>
-                </a>
-            </div>
-        </div>
-        <div class='slide_img slide_fade' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 100%), url(/public/img/culto/church.jpeg);'>
-            <div class='shadow'></div>
-            <div class='slide_position'>
-                <div class='slide_date'>06/05/2018</div>
-                <div class='slide_title'>
-                    <span>Paixão pela</span>
-                    <div class='subtitle'>igreja</div>
-                </div>
-                <a class='slide_button flex'>
-                    <div class='material-icons flex'>headset</div>
-                    <span>Acesse agora</span>
-                </a>
-            </div>
-        </div>
+        <?php } ?>
         <div class='container_dots flex'>
             <div class='slide_play flex material-icons' onclick='reset(true)'>keyboard_arrow_right</div>
             <div class='group_dots'></div>

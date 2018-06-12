@@ -22,7 +22,7 @@
   transition: opacity 1s, visibility 1s;
 }
 
-.slide_fade {
+.slide_fade{
   visibility: visible;
   opacity: 1;
 }
@@ -56,7 +56,7 @@
   letter-spacing: 1px;
 }
 
-.slide_title .subtitle {
+.slide_title strong {
   font-weight: 600;
   letter-spacing: 5px;
 }

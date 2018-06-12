@@ -160,3 +160,28 @@ function select_audio(audio) {
     currentAudio = audio;
   }
 }
+
+function select_word(titulo, n, id) {
+  var url = '/views/pages/palavra.php';
+  $.ajax({
+    url: url,
+    data: 'id_palavra='+id+'&titulo='+n,
+    beforeSend: function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 400);
+      $('#loader').show();
+      $('.content').hide();
+      $('.content').html('');
+    },
+    success: function(data) {
+      setTimeout(function() {
+        document.title = titulo + ' | IBAV Marília';
+        window.history.pushState('', '', '/palavras/' + n);
+        $('#loader').hide();
+        $('.content').show();
+        $('.content').html(data);
+      }, 700);
+    }
+  });
+}

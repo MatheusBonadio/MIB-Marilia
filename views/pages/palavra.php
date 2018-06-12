@@ -1,19 +1,7 @@
     <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
         $dao = new PalavraDAO();
-        $exec = $dao->listar();
-
-        $palavra = $dao->listarId($listar["id_palavra"]);
-
-        $jsonUrl = $_SERVER['DOCUMENT_ROOT'].'/public/json/books.json';
-        $jsonData = file_get_contents($jsonUrl, true);
-        $book_formated = json_decode($jsonData, true);
-
-        $book = 'neemias';
-
-        $jsonUrl = $_SERVER['DOCUMENT_ROOT'].'/public/json/bible/'.$book.'.json';
-        $jsonData = file_get_contents($jsonUrl, true);
-        $obj = json_decode($jsonData, true);
+        $palavra = $dao->listarId($_GET['id_palavra']);
     ?>
     <link rel='stylesheet' href='/public/css/palavra.css' type='text/css'>
 
@@ -27,7 +15,7 @@
                 <div class='author'>
                     <div class='img' style='background-image: url(/public/img/culto/photo.jpg);'></div>
                     <div class='name'><?php echo $palavra['sigla'].' '.$palavra['nome'] ?></div>
-                    <div class='date'><?php echo $palavra['data'] ?></div>
+                    <div class='date'><?php echo $palavra['data_formatada'] ?></div>
                 </div>
                 <div class='word_text'>
                     <?php echo $palavra['texto'] ?>
