@@ -6,32 +6,28 @@
 <link rel='stylesheet' href='/public/css/font.css' type='text/css'>
 
 <div class='word_text'>
-    <?php $biblia->livro('salmos', '60', '9', '12'); ?>
+    <?php $biblia->livro('1corintios', '10', '31'); ?>
 
-    <p>Você entender que foi chamado por Deus a fazer proezas é essencial para sua vida cristã. Muitos na bíblia foram chamados a proeza: Davi, Israel e tantos outros. Mas nós também fomos chamados. Proeza significa força, habilidade e eficiência e em Deus, como diz o versículo, faremos tudo isso. Deus nos capacitará. Ser chamado a grandeza não é ter dinheiro, carro, roupas ou muitos bens, mas usar o seu potencial para ir além, usar os dons e talentos em nossas vidas, isso é grandeza e assim faremos proezas. Somos chamados a fazer grandes proezas em Deus.</p>
+    <p>Jesus falou que não vivia para a glória dos homens, Efésios 1:6 diz que fomos criados para a Glória de Deus, e quando entendemos isso é que encontramos sentido nessa vida. Viver para glorificar a Deus é um estilo. Alguns acham que apenas no encargo de pastor, ou que algumas atitudes é que o glorificam, mesmo que seja nas atitudes simples e cotidianas, podemos e devemos glorificar a Deus, todas as nossas ações devem ser voltadas na santidade e no amor a Glória de Deus.</p>
 
-    <h4>1 - Ele nos conduz e nos auxilia (verso 9)</h4>
+    <h4>1 - Para glorificar a Deus temos que evitar desperdícios</h4>
 
-    <p>Davi sabia que seus recursos eram limitados, e sabia que por ele não conseguiria chegar até lá. Apesar de tantas vitórias, Davi não ficou autoconfiante, mas sua confiança em Deus aumentou, Davi sabia que em Deus ele poderia ser conduzido até a vitória. Muitas vezes você olha para sua vida, muitos problemas e se depara com uma dificuldade que só diminui você. Nesse momento Deus quer nos levar a parar de olhar para nós, e dizer: em Deus vencerei.</p>
+    <p>O problema é que muitos desperdiçam o que possuem, seja o tempo, a comida, o dinheiro. Alguns vivem pensando apenas no lazer e fazem de todo o resto da vida um tormento. Quantos desperdiçam relacionamentos, abrem mão de pessoas chave que poderiam levá-las mais longe, quantos perdem tempo em relacionamentos que nunca vão levar a nada.</p>
 
-    <?php $biblia->livro('marcos', '5', '25', '34'); ?>
+    <h4>2 - A Glória de Deus nos dá propósito </h4>
 
-    <p>A mulher do fluxo de sangue utilizou todos os seus recursos, quando ela percebeu que era o fim, foi ai que Jesus curou e ela viveu proezas. Você precisa ter em seu coração que viverá grandes proezas, então não se limite, não tenha mente de escravo, não se limite pelos seus recursos ou capacidade. Creia em Deus e você viverá grandes proezas.</p>
+    <p>Viver para a Glória de Deus da sentido até as coisas mais simples como comer e beber, cuidar dos filhos, trabalhar, estudar. Glorificamos a Deus sabendo que Ele nos da bons presentes, valorizando tudo que nos é proporcionado, a vida não é só estudar, trabalhar, a vida tem coisas maiores e mais importante, a Glória de Deus.</p>
 
-    <h4>2 - Não é o socorro dos homens (verso 11)</h4>
+    <h4>3 - Somos transformados pela Glória de Deus</h4>
 
-    <p>Davi sabia que o socorro dele vinha de Deus e não dos homens. Davi não colocou sua confiança nos seus braços ou nos braços de outro homem, pois sabia que tudo isso seria vão. O povo que conhece e confia em Deus se tornará forte e fará proezas.</p>
+    <?php $biblia->livro('2corintios', '3', '18'); ?>
 
-    <?php $biblia->livro('daniel', '11', '32'); ?>
+    <p>O verso diz que a nossa transformação é enquanto contemplamos o Senhor, enquanto o adoramos, enquanto pensamos e vivemos para a glória DEle somos transformados, nossa mente é mudada, nossas vontades e desejos se alinham com os planos do Céu.</p>
 
-    <p>A auto confiança era algo que Davi não tinha nesse momento, ele não pedia auxilio de homens, nem mais recursos, mas ele sabia que quem prestaria auxílio e socorreria seria o Senhor. Deus coloca as pessoas para nos abençoar, creia nisso, mas nos momentos de precisão, de angustia, dor e luta não necessitamos somente de intervenção humana, mas sim de intervenção divina. Pessoas nos abençoam e também podemos abençoar, mas a única saída é confiar em Deus e fazer grandes proezas.</p>
+    <h4>4 - Tudo para a Glória de Deus</h4>
 
-    <h4>3 - Nele faremos proezas (verso 12)</h4>
+    <p>Quanta mudança faríamos se vivêssemos assim, se cada trabalhador, pai, mãe, filho, estudante em todos momentos, em tudo que fazem fosse para a Glória de Deus. Que o nome de Deus seja santificado, que seja promovido o evangelho e não os nossos projetos. Todos os dias, onde vamos, sempre há uma chance para exaltar o nome de Deus, faze-lo grande nessa geração, o nosso desejo é que em tudo que fizemos e que somos Deus seja glorificado.</p>
 
-    <p>O que é proeza para você? Enfrentar as dificuldades com família, trabalho ou ministério. Você precisa de força ou habilidade em qual área da sua vida? O que te faz parar, o que te fez parar e o que você ainda está parado? Para cada um é diferente, é preciso encarar cada situação em nossa vida, sabendo que Deus nos conduzirá a vitória e a conquista. Você precisa se arriscar em Deus, sair da zona de conforto e ir além daquilo que você já conquistou e conquistar ainda mais coisas e muitas proezas em Deus. Proeza é realizar e enfrentar situações que não podemos resolver sabendo que o Senhor vai nos capacitar, mas para viver coisas grandes você precisa deixar para trás sua frustrações, e encarar os problemas, saber lidar com as situações crendo que em Deus você passará por tudo isso. Creia em Deus e realize grandes proezas.</p>
-
-    <h3>O que tem parado você?</h3>
-    <h3>Você tem confiado em Deus ou tem colocado a confiança nos homens?</h3>
-    <h3>Você crê que Deus vai te conduzir a realizar grandes proezas?</h3>
+    <h4>Pense: você deseja glorificar a Deus todos os dias ou só aos domingos?</h4>
 
 </div>

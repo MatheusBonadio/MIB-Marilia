@@ -71,7 +71,6 @@ $(document).on('scroll', function() {
 });
 
 $('#back_top').click(function() {
-  console.log('xd');
   $('html, body').animate({
     scrollTop: 0
   }, 'slow');
@@ -146,16 +145,17 @@ window.fbAsyncInit = function() {
 
 var currentAudio;
 
-function select_audio(audio) {
+function select_audio(audio, titulo, data, img) {
   if (currentAudio != audio) {
     var container_audio = $('.container_audio');
     var player = document.getElementById('player');
     player.src = '/public/audio/' + audio;
+    $('#titulo').html(titulo);
+    $('#data').html(data);
+    $('.audio_img').css('background-image', 'url(/public/img/culto/' + img + ')');
     if (!container_audio.hasClass('show_audio')) {
       container_audio.addClass('show_audio');
       $('body').css('--viewWidth', 'calc(100vh - 60px)');
-    } else {
-      $('body').css('--viewWidth', '100vh');
     }
     currentAudio = audio;
   }
@@ -165,7 +165,7 @@ function select_word(titulo, n, id) {
   var url = '/views/pages/palavra.php';
   $.ajax({
     url: url,
-    data: 'id_palavra='+id+'&titulo='+n,
+    data: 'id_palavra=' + id + '&titulo=' + n,
     beforeSend: function() {
       $('html, body').animate({
         scrollTop: 0
@@ -184,4 +184,12 @@ function select_word(titulo, n, id) {
       }, 700);
     }
   });
+}
+
+function getDuration(src, cb) {
+  var audio = new Audio();
+  $(audio).on('loadedmetadata', function() {
+    cb(audio.duration);
+  });
+  audio.src = src;
 }

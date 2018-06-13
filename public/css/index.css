@@ -46,16 +46,6 @@ body {
   justify-content: center;
 }
 
-@font-face {
-  font-family: Main;
-  src: url(/public/fonts/Main.ttf)
-}
-
-@font-face {
-  font-family: Caligrafia;
-  src: url(/public/fonts/caligrafia.ttf)
-}
-
 .header {
   width: 100vw;
   height: 100px;

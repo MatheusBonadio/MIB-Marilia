@@ -6,9 +6,9 @@
     <link rel='stylesheet' href='/public/css/palavra.css' type='text/css'>
 
     <div class='container'>
-        <div class='word_header' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 50%), url(/public/img/culto/<?php echo $palavra['img'] ?>);'>
+        <div class='word_header flex' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.5) 0%,rgba(20,20,20,.5) 50%), url(/public/img/culto/<?php echo $palavra['img'] ?>);'>
             <img style='display: none' src='/public/img/culto/<?php echo $palavra['img'] ?>'></img>
-            <div class='title'><?php echo $palavra['titulo'] ?></div>
+            <div class='title'><?php echo $palavra['titulo_dividido'] ?></div>
         </div>
         <div class='word_body'>
             <div class='word_content'>
@@ -32,28 +32,34 @@
             <div class='content_side'>
                 <div class='title'>Mídia</div>
                 <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET["titulo"].'.mp3')) { ?>
-                <div class='button' onclick='select_audio("<?php echo $_GET["titulo"].'.mp3' ?>")'>
+                <a class='button' onclick='select_audio("<?php echo $_GET['titulo'].'.mp3' ?>", "<?php echo $palavra['titulo'] ?>", "<?php echo $palavra['data_formatada2'] ?>", "<?php echo $palavra['img'] ?>")'>
                     <div class='material-icons flex'>headset</div>
                     <div class='vertical flex'>
                         <span>OUVIR</span>
-                        <span>(57:20)</span>
+                        <span id='length'>(00:00)</span>
                     </div>
-                </div>
-                <div class='button'>
+                </a>
+                <a class='button' href='<?php echo '/public/audio/'.$_GET['titulo'].'.mp3' ?>' download>
                     <div class='material-icons flex'>save_alt</div>
                     <div class='vertical flex'>
                         <span>BAIXAR</span>
-                        <span>(39.8 MB)</span>
+                        <span>(<?php echo number_format(filesize($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET['titulo'].'.mp3')/1024/1024, 1, '.', '').' MB' ?>)</span>
                     </div>
-                </div>
+                </a>
+                <script>
+                    getDuration('<?php echo '/public/audio/'.$_GET['titulo'].'.mp3' ?>', function(length) {
+                        length = calculateTotalValue(length);
+                        $('#length').html('('+length+')');
+                    });
+                </script>
                 <?php } ?>
-                <div class='button' id='print'>
+                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>")'>
                     <div class='material-icons flex'>print</div>
                     <div class='vertical flex'>
                         <span>IMPRIMIR</span>
                         <span>(Formato PDF)</span>
                     </div>
-                </div>
+                </a>
                 <div class='title'>Mais lidas</div>
             </div>
         </div>

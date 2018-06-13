@@ -5,14 +5,14 @@
 		        <source type='audio/mp3'>
 		    </audio>
 		    <div class='audio_info'>
-		        <div class='audio_img flex' style='background-image: url(/public/img/culto/ideas.png);'>
+		        <div class='audio_img flex'>
 		            <div class='loader_background flex'>
 		                <div class='loader'></div>
 		            </div>
 		        </div>
 		        <div class='audio_text flex'>
-		            <div>A posição cristã em meio ao caos</div>
-		            <div>27/05/2018</div>
+		            <div id='titulo'></div>
+		            <div id='data'></div>
 		        </div>
 		    </div>
 		    <div class='rewind material-icons'>fast_rewind</div>

@@ -1,4 +1,154 @@
-.container{
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 30px 2px rgba(0, 0, 0, .05);
+}
+
+.header .default {
+  color: #000;
+}
+
+.header .img {
+  background-image: url(/public/img/system/logo.svg);
+}
+
+.title_head {
+  width: 100%;
   box-sizing: border-box;
-  padding-top: 100px;
+  padding: 195px var(--padding) 0 calc(var(--padding) + 5px);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font: 600 40px Dosis;
+  height: 400px;
+  background-image: linear-gradient(to bottom, rgba(20, 20, 20, .2) 0%, rgba(20, 20, 20, .2) 50%), url(/public/img/system/palavra.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.title_head p {
+  line-height: 1;
+  margin-top: 7px;
+  letter-spacing: 0;
+  text-transform: none;
+  font: 300 18px Roboto;
+}
+
+.content_side {
+  margin-top: 0;
+}
+
+.word_body {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.word_body .title {
+  font: 500 15px Dosis;
+}
+
+.word_body .title::after {
+  width: 200px;
+}
+
+.word_text {
+  padding-top: 0;
+}
+
+.word_text .block {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 22.5px 0;
+  box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  transition: border .4s;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.word_text .block:hover {
+  border-color: #0099ff;
+}
+
+.word_text .block:hover .text div:nth-child(1) {
+  color: #0099ff;
+}
+
+.word_text .block:hover .img {
+  border-color: #0099ff;
+}
+
+.word_text .block .img {
+  min-width: 45%;
+  min-height: 170px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: border .4s;
+  border-right: 1px solid #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.word_text .block .img .date {
+  color: #fff;
+  padding: 0 25px;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+
+.word_text .block .img .date .month {
+  font: 300 18px Dosis;
+}
+
+.word_text .block .img .date .day {
+  font: 600 43px Dosis;
+}
+
+.word_text .block .img .date .year {
+  font: 200 18px Dosis;
+}
+
+.word_text .block .text {
+  box-sizing: border-box;
+  padding: 20px 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.word_text .block .text div:nth-child(1) {
+  text-transform: uppercase;
+  font: 500 18px Dosis;
+  letter-spacing: 1px;
+  color: #757575;
+  transition: color .4s;
+}
+
+.word_text .block .text div:nth-child(2) {
+  color: #2a2a2a;
+  font: 300 13px Roboto;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.word_text .block .text div:nth-child(2) * {
+  display: none;
+}
+
+.word_text .block .text div:nth-child(2) p:nth-of-type(1) {
+  display: block;
+  margin: 0;
+}
+
+@media screen and (max-width:1100px) {
+  .word_text .block {
+    flex-direction: column;
+  }
+  .word_text .block .img {
+    border-bottom: 1px solid #d0d0d0;
+  }
 }

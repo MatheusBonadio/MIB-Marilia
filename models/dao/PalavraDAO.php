@@ -27,10 +27,19 @@ class PalavraDAO
 
     public function listar()
     {
-        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada FROM palavra ORDER BY data desc';
+        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc';
         $prep = $this->con->prepare($sql);
         $prep->execute();
         $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
+        $arrayMonth = array(
+              '01'=>"JAN",	'02'=>"FEV",		'03'=>"MAR",
+              '04'=>"ABR",	'05'=>"MAIO",		'06'=>"JUN",
+              '07'=>"JUL",	'08'=>"AGO",		'09'=>"SET",
+              '10'=>"OUT",	'11'=>"NOV",		'12'=>"DEZ"
+          );
+        foreach ($exec as $key=>$list) {
+            $exec[$key]['mes'] = $arrayMonth[$list['mes']];
+        }
         return $exec;
     }
 
@@ -91,7 +100,7 @@ class PalavraDAO
 
     public function listarId($codigo)
     {
-        $sql = 'SELECT *, DATE_FORMAT(data, "%d de %M de %Y") as data_formatada,
+        $sql = 'SELECT *, DATE_FORMAT(data, "%d de %M de %Y") as data_formatada, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada2,
         (SELECT sigla FROM encargo WHERE palavra.id_lider = lider.id_lider AND encargo.id_encargo = lider.id_encargo) AS sigla
         FROM palavra, lider WHERE id_palavra = :idPalavra AND lider.id_lider = palavra.id_lider';
         $prep = $this->con->prepare($sql);
