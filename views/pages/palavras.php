@@ -1,12 +1,13 @@
 		<?php
 				require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
 				$dao = new PalavraDAO();
-				$exec = $dao->listar();
+				$exec = $dao->listarFormatado();
 		?>
 		<link rel='stylesheet' href='/public/css/palavra.css' type='text/css'>
 		<link rel='stylesheet' href='/public/css/palavras.css' type='text/css'>
 
 		<div class='container'>
+			<img style='display: none' src='/public/img/system/palavra.jpg'></img>
 			<div class='title_head'>
 					<div>Palavras</div>
 					<p>A fé vem pela pregação, e a pregação, <br /> pela palavra de Cristo. <strong>Romanos 10:17</strong></p>

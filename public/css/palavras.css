@@ -144,6 +144,10 @@
   margin: 0;
 }
 
+.header_icon {
+  color: #0099ff;
+}
+
 @media screen and (max-width:1100px) {
   .word_text .block {
     flex-direction: column;

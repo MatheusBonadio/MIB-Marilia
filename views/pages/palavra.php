@@ -1,7 +1,7 @@
     <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
         $dao = new PalavraDAO();
-        $palavra = $dao->listarId($_GET['id_palavra']);
+        $palavra = $dao->consultarId($_GET['id_palavra']);
     ?>
     <link rel='stylesheet' href='/public/css/palavra.css' type='text/css'>
 
@@ -15,7 +15,7 @@
                 <div class='author'>
                     <div class='img' style='background-image: url(/public/img/culto/photo.jpg);'></div>
                     <div class='name'><?php echo $palavra['sigla'].' '.$palavra['nome'] ?></div>
-                    <div class='date'><?php echo $palavra['data_formatada'] ?></div>
+                    <div class='date'><?php echo $palavra['dia'].' de '.$palavra['mes'].' de '.$palavra['ano'] ?></div>
                 </div>
                 <div class='word_text'>
                     <?php echo $palavra['texto'] ?>
@@ -32,7 +32,7 @@
             <div class='content_side'>
                 <div class='title'>Mídia</div>
                 <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET["titulo"].'.mp3')) { ?>
-                <a class='button' onclick='select_audio("<?php echo $_GET['titulo'].'.mp3' ?>", "<?php echo $palavra['titulo'] ?>", "<?php echo $palavra['data_formatada2'] ?>", "<?php echo $palavra['img'] ?>")'>
+                <a class='button' onclick='select_audio("<?php echo $_GET['titulo'].'.mp3' ?>", "<?php echo $palavra['titulo'] ?>", "<?php echo $palavra['data_formatada'] ?>", "<?php echo $palavra['img'] ?>")'>
                     <div class='material-icons flex'>headset</div>
                     <div class='vertical flex'>
                         <span>OUVIR</span>

@@ -3,7 +3,7 @@ var currentHead;
 function select_head(n) {
   var path = last_word();
   var sites = ['home', 'eventos', 'palavras', 'celulas', 'igreja', 'login'];
-  var sites_format = ['Home', 'Eventos', 'Palavras', 'Células', 'A Igreja', 'Login'];
+  var sites_format = ['Home', 'Eventos', 'Palavras', 'Células', 'Igreja', 'Login'];
   var url = '/views/pages/' + sites[n] + '.php';
   if (path != sites[n]) {
     currentHead = false;
@@ -70,6 +70,15 @@ $(document).on('scroll', function() {
   }
 });
 
+$('.header_icon .material-icons').click(function() {
+  var header = $('.header');
+  if (header.hasClass('active')) {
+    header.removeClass('active');
+  } else {
+    header.addClass('active');
+  }
+});
+
 $('#back_top').click(function() {
   $('html, body').animate({
     scrollTop: 0
@@ -93,26 +102,26 @@ function initMap() {
     mapTypeControl: false,
     fullscreenControl: false,
     styles: [{
-      "featureType": "administrative",
-      "elementType": "geometry",
-      "stylers": [{
-        "visibility": "off"
+      'featureType': 'administrative',
+      'elementType': 'geometry',
+      'stylers': [{
+        'visibility': 'off'
       }]
     }, {
-      "featureType": "poi",
-      "stylers": [{
-        "visibility": "off"
+      'featureType': 'poi',
+      'stylers': [{
+        'visibility': 'off'
       }]
     }, {
-      "featureType": "road",
-      "elementType": "labels.icon",
-      "stylers": [{
-        "visibility": "off"
+      'featureType': 'road',
+      'elementType': 'labels.icon',
+      'stylers': [{
+        'visibility': 'off'
       }]
     }, {
-      "featureType": "transit",
-      "stylers": [{
-        "visibility": "off"
+      'featureType': 'transit',
+      'stylers': [{
+        'visibility': 'off'
       }]
     }]
   });
@@ -139,7 +148,7 @@ window.fbAsyncInit = function() {
   }
   js = d.createElement(s);
   js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  js.src = 'https://connect.facebook.net/en_US/sdk.js';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 

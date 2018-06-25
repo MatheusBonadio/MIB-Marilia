@@ -47,10 +47,21 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-110299461-2'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-110299461-2');
+    </script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <meta name='theme-color' content='#fff' />
     <meta charset='UTF-8' />
     <meta content='width=device-width, initial-scale=0.6' name='viewport' />
+    <!-- <meta property='og:image' content='https://ibavmarilia.com/public/img/culto/.jpeg' /> -->
+    <meta property='og:description' content='&nbsp;' />
+    <meta name='description' content='Acesse e fique por dentro das novidades que ocorrem na nossa igreja local Igreja Batista Água Viva de Marília (IBAV Marília).' />
+    <meta name='keywords' content='igreja, ibav, marilia, ibav marilia, igreja local, eclésia, ministério, edificação, radicais livres' />
     <title><?php echo ucfirst($parse_url); ?> | IBAV Marília</title>
     <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' href='/public/css/font.css' type='text/css' />
@@ -60,15 +71,22 @@
 <body>
 
     <div class='header'>
-        <a onclick='select_head(0)'>
+        <a class='logo' onclick='select_head(0)'>
             <div class='img'></div>
         </a>
-        <a class='flex' onclick='select_head(0)'>home</a>
-        <a class='flex' onclick='select_head(1)'>eventos</a>
-        <a class='flex' onclick='select_head(2)'>palavras</a>
-        <!-- <a class='flex' onclick='select_head(3)'>células</a> -->
-        <a class='flex' onclick='select_head(4)'>a igreja</a>
-        <!-- <a class='flex' onclick='select_head(5)'>login</a> -->
+        <div class='header_icon'>
+            <div class='material-icons'></div>
+        </div>
+        <div class='header_side'>
+            <div class='header_space'></div>
+            <a class='flex' onclick='select_head(0)'>home</a>
+            <a class='flex' onclick='select_head(1)'>eventos</a>
+            <a class='flex' onclick='select_head(2)'>palavras</a>
+            <!-- <a class='flex' onclick='select_head(3)'>células</a> -->
+            <a class='flex' onclick='select_head(4)'>a igreja</a>
+            <!-- <a class='flex' onclick='select_head(5)'>login</a> -->
+            <div class='fill'></div>
+        </div>
     </div>
 
     <script src='/public/js/index.js'></script>

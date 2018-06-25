@@ -1,7 +1,7 @@
     <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
         $dao = new PalavraDAO();
-        $palavra = $dao->listar();
+        $palavra = $dao->listarFormatado(4);
     ?>
     <link rel='stylesheet' href='/public/css/home.css' type='text/css'>
 
@@ -45,7 +45,7 @@
                 <span>Quem Somos</span>
             </div>
             <div class='body'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                A Igreja Batista Água Viva de Marília é uma igreja evangélica batista e iniciou suas atividades no ano de 2009. Somos filiados à VINHA - Videira e Ministérios associados. Nosso ministério em Marília tem como presidente o Pr. Darcio Gonçalves.
             </div>
         </div>
         <div class='block_mission'>
@@ -54,7 +54,7 @@
                 <span>Missão</span>
             </div>
             <div class='body'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                A Igreja desempenha muitos papéis ao trazer a salvação para o mundo. Ergue-se como a luz do mundo. É a casa ou família de Deus. É a mãe que nutre os filhos e filhas de Deus. Ela atua como a "coluna e firmeza da verdade" em um mundo espiritualmente confuso.
             </div>
         </div>
         <div class='block_mission'>
@@ -63,7 +63,7 @@
             <span>Visão</span>
           </div>
           <div class='body'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Nosso encargo é edificar uma igreja de vencedores, onde cada membro é um sacerdote e cada casa uma extensão da igreja, conquistando, assim, a nossa geração para Cristo, através das célula que se multiplicam.
           </div>
         </div>
     </div>
@@ -74,6 +74,8 @@
           var div = $('<div class=\'dots\' onclick=\'currentSlide('+(i+1)+')\'></div>');
           $('.group_dots').append(div);
         }
+        $('.slide_img:eq(0)').addClass('slide_fade');
+
         var url = "/public/js/home.js";
         $.getScript(url);
         slider($(".header a:eq(1)"))

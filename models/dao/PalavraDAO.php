@@ -27,19 +27,10 @@ class PalavraDAO
 
     public function listar()
     {
-        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc';
+        $sql = 'SELECT * FROM palavra ORDER BY data desc';
         $prep = $this->con->prepare($sql);
         $prep->execute();
         $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
-        $arrayMonth = array(
-              '01'=>"JAN",	'02'=>"FEV",		'03'=>"MAR",
-              '04'=>"ABR",	'05'=>"MAIO",		'06'=>"JUN",
-              '07'=>"JUL",	'08'=>"AGO",		'09'=>"SET",
-              '10'=>"OUT",	'11'=>"NOV",		'12'=>"DEZ"
-          );
-        foreach ($exec as $key=>$list) {
-            $exec[$key]['mes'] = $arrayMonth[$list['mes']];
-        }
         return $exec;
     }
 
@@ -98,15 +89,47 @@ class PalavraDAO
         return $titulo;
     }
 
-    public function listarId($codigo)
+    public function consultarId($codigo)
     {
-        $sql = 'SELECT *, DATE_FORMAT(data, "%d de %M de %Y") as data_formatada, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada2,
+        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") as dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano,
         (SELECT sigla FROM encargo WHERE palavra.id_lider = lider.id_lider AND encargo.id_encargo = lider.id_encargo) AS sigla
         FROM palavra, lider WHERE id_palavra = :idPalavra AND lider.id_lider = palavra.id_lider';
         $prep = $this->con->prepare($sql);
         $prep->bindValue(':idPalavra', $codigo);
         $prep->execute();
         $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
+        $arrayMonth = array(
+            '01'=>'Janeiro',	'02'=>'Fevereiro',		'03'=>'Março',
+            '04'=>'Abril',	'05'=>'Maio',		'06'=>'Junho',
+            '07'=>'Julho',	'08'=>'Agosto',		'09'=>'Setembro',
+            '10'=>'Outubro',	'11'=>'Novembro',		'12'=>'Dezembro'
+        );
+        $exec[0]['mes'] = $arrayMonth[$exec[0]['mes']];
         return $exec[0];
+    }
+
+    public function listarFormatado($limit = null)
+    {
+        if (!is_null($limit)) {
+            $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc LIMIT   :limitIndex';
+        } else {
+            $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc';
+        }
+        $prep = $this->con->prepare($sql);
+        if (!is_null($limit)) {
+            $prep->bindValue(':limitIndex', (int) $limit, PDO::PARAM_INT);
+        }
+        $prep->execute();
+        $exec = $prep->fetchAll(PDO::FETCH_ASSOC);
+        $arrayMonth = array(
+              '01'=>'JAN',	'02'=>'FEV',		'03'=>'MAR',
+              '04'=>'ABR',	'05'=>'MAIO',		'06'=>'JUN',
+              '07'=>'JUL',	'08'=>'AGO',		'09'=>'SET',
+              '10'=>'OUT',	'11'=>'NOV',		'12'=>'DEZ'
+          );
+        foreach ($exec as $key=>$list) {
+            $exec[$key]['mes'] = $arrayMonth[$list['mes']];
+        }
+        return $exec;
     }
 }

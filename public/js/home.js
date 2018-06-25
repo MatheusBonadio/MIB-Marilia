@@ -1,8 +1,8 @@
 var slideIndex = 1;
 var timer;
 var disable = false;
-var touchMove = 0,
-  touchStart = 0;
+// var touchMove = 0,
+//   touchStart = 0;
 var dots = $('.dots');
 var slides = $('.slide_img');
 

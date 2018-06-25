@@ -19,12 +19,7 @@
   filter: contrast(105%) brightness(110%);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1s, visibility 1s;
-}
-
-.slide_img:nth-of-type(1){
-  visibility: visible;
-  opacity: 1;
+  transition: opacity 1s, visibility .9s;
 }
 
 .slide_fade{

@@ -28,7 +28,7 @@
 						</div>
 				</div>
 				<div class='mid'>
-						<span>© 2018 IGREJA BATISTA ÁGUA VIVA DE MARÍLIA. TODOS OS DIREITOS RESERVADOS.</span>
+						<span>© <?php echo date('Y')?> IGREJA BATISTA ÁGUA VIVA DE MARÍLIA. TODOS OS DIREITOS RESERVADOS.</span>
 						<div class='img'></div>
 				</div>
 				<div class='dev flex'>Front e Back-end: Matheus Lima Bonadio</div>

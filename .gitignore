@@ -1,3 +1,6 @@
 public/img/culto/[^.]*
 public/audio/[^.]*
 tests/
+controllers/ibav.dm2
+controllers/ibav.sql
+views/painel/palavra/
