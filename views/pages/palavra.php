@@ -13,8 +13,9 @@
         <div class='word_body'>
             <div class='word_content'>
                 <div class='author'>
-                    <div class='img' style='background-image: url(/public/img/culto/photo.jpg);'></div>
+                    <div class='img' style='background-image: url(/public/img/lider/<?php echo $palavra["foto"] ?>);'></div>
                     <div class='name'><?php echo $palavra['sigla'].' '.$palavra['nome'] ?></div>
+                    <div class='category'><?php echo $palavra['categoria'] ?></div>
                     <div class='date'><?php echo $palavra['dia'].' de '.$palavra['mes'].' de '.$palavra['ano'] ?></div>
                 </div>
                 <div class='word_text'>
@@ -53,7 +54,7 @@
                     });
                 </script>
                 <?php } ?>
-                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>")'>
+                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>", "<?php echo $_GET['titulo'] ?>")'>
                     <div class='material-icons flex'>print</div>
                     <div class='vertical flex'>
                         <span>IMPRIMIR</span>

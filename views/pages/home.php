@@ -10,7 +10,7 @@
         <div class='slide_img' style='background-image: linear-gradient(to bottom, rgba(20,20,20,.45) 0%,rgba(20,20,20,.45) 100%), url(/public/img/culto/<?php echo $listar['img'] ?>);'>
             <div class='shadow'></div>
             <div class='slide_position'>
-                <div class='slide_date'><?php echo $listar['data_formatada'] ?></div>
+                <div class='slide_date'><?php echo $listar['data_formatada'].' - '.$listar['categoria'] ?></div>
                 <div class='slide_title'>
                     <?php echo $listar['titulo_dividido'] ?>
                 </div>

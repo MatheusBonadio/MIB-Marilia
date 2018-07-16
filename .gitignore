@@ -1,4 +1,5 @@
 public/img/culto/[^.]*
+public/img/lider/[^.]*
 public/audio/[^.]*
 tests/
 controllers/ibav.dm2

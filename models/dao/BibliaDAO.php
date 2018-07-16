@@ -21,10 +21,10 @@ class BibliaDAO
 
         if (isset($verso2)) {
             for ($i=$verso1;$i<=$verso2;$i++) {
-                echo "<p><span class='verse'>".$i.".</span> ".$obj[$capitulo-1][$i]."</p>";
+                echo "<p><span class='verse'>".$i."</span> ".$obj[$capitulo-1][$i]."</p>";
             }
         } else {
-            echo "<p><span class='verse'>".$verso1.".</span> ".$obj[$capitulo-1][$verso1]."</p>";
+            echo "<p><span class='verse'>".$verso1."</span> ".$obj[$capitulo-1][$verso1]."</p>";
         }
         echo '</div>';
     }

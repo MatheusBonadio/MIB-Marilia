@@ -61,43 +61,51 @@
 }
 
 .author {
-  height: 40px;
+  height: 30px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .author .img {
   border: 3px solid #fff;
   border-radius: 50%;
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  top: -45px;
+  top: -70px;
 }
 
 .author .name {
-  padding-left: 95px;
+  padding-left: 120px;
   font: 400 20px Dosis;
   position: absolute;
-  top: -35px;
+  top: -59px;
+  color: #fff;
+}
+
+.author .category {
+  padding-left: 120px;
+  font: 200 16px Dosis;
+  position: absolute;
+  top: -29px;
   color: #fff;
 }
 
 .author .date {
+  padding-left: 120px;
   color: #333;
-  padding-left: 95px;
-  white-space: nowrap;
-  font: 400 17px Dosis;
+  font: 400 16px Dosis;
 }
 
 .word_text {
   padding-top: 25px;
   text-align: justify;
-  font: 300 16px Roboto;
-  line-height: 1.6;
+  font: 300 15px Roboto;
+  line-height: 1.7;
 }
 
 u {
@@ -137,6 +145,7 @@ u {
 .bible .verse {
   font-size: 11px;
   vertical-align: super;
+  margin-right: 2px;
 }
 
 .bible::before {
@@ -161,6 +170,11 @@ u {
 .word_text h4, .share span {
   margin: 25px 0 10px 0;
   font: 500 16px Roboto;
+  color: #363636;
+}
+
+.word_text p strong {
+  font-weight: 500;
   color: #363636;
 }
 
@@ -339,7 +353,7 @@ u {
   .header.active .header_icon {
     color: #0099ff;
   }
-  .header a:nth-child(n+2){
+  .header a:nth-child(n+2) {
     color: #000;
   }
 }

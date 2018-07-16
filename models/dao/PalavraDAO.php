@@ -91,7 +91,7 @@ class PalavraDAO
 
     public function consultarId($codigo)
     {
-        $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") as dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano,
+        $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") as dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano,
         (SELECT sigla FROM encargo WHERE palavra.id_lider = lider.id_lider AND encargo.id_encargo = lider.id_encargo) AS sigla
         FROM palavra, lider WHERE id_palavra = :idPalavra AND lider.id_lider = palavra.id_lider';
         $prep = $this->con->prepare($sql);
@@ -111,9 +111,9 @@ class PalavraDAO
     public function listarFormatado($limit = null)
     {
         if (!is_null($limit)) {
-            $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc LIMIT   :limitIndex';
+            $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc LIMIT :limitIndex';
         } else {
-            $sql = 'SELECT *, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc';
+            $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc';
         }
         $prep = $this->con->prepare($sql);
         if (!is_null($limit)) {

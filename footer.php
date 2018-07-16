@@ -15,7 +15,7 @@
 								<div class='title'>Visite a IBAV Marília</div>
 								<div class='body'>
 										<div id='map'></div>
-										<strong>Rua Ninfa Pietraroia, 628 – Palmital – Marília – SP</strong>
+										<strong>Rua Ninfa Pietraroia, 628 – Palmital – Marília / SP</strong>
 										<p>E-mail: aguavivamarilia@outlook.com</p>
 										<p>Culto todo domingo as 19h</p>
 								</div>
@@ -23,7 +23,7 @@
 						<div class='block'>
 								<div class='title'>Curta nossa página</div>
 								<div class='body'>
-										<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faguavivamarilia%2F&tabs&width=357&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="357" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+										<iframe src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fibavmarilia%2F&tabs&width=357&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=197402124225732' width='357' height='154' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
 								</div>
 						</div>
 				</div>

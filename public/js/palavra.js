@@ -1,4 +1,4 @@
-function printable(titulo) {
+function printable(titulo, titulo2) {
   $.ajax({
     url: "/public/css/print.css",
     success: function(styleCss) {
@@ -12,7 +12,7 @@ function printable(titulo) {
     if (mywindow == null || typeof(mywindow) == 'undefined') {
       //alert('Please disable your pop-up blocker and click the "Open" link again.');
     }
-    mywindow.document.write('<html><head><title>' + titulo + ' | IBAV Marília</title>');
+    mywindow.document.write('<html><head><title>https://ibavmarilia.com/palavras/' + titulo2 + '</title>');
     mywindow.document.write('<style>' + styleCss + '</style>');
     mywindow.document.write('</head><body><h1>' + titulo + '</h1>');
     mywindow.document.write(data);
