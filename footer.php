@@ -6,7 +6,7 @@
 								<div class='title'>Pastores</div>
 								<div class='body'>
 										<div class='img'></div>
-										<p><strong>Pastor Senior: </strong>Darcio Gonçalves</p>
+										<p><strong>Pastor Senior: </strong>Dárcio Gonçalves</p>
 										<p><strong>Pastor rede Família: </strong>Willians Durso</p>
 										<p><strong>Pastor rede Jovens: </strong>João Roberto</p>
 								</div>

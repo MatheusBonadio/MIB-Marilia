@@ -1,7 +1,7 @@
     <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/PalavraDAO.php';
         $dao = new PalavraDAO();
-        $palavra = $dao->listarFormatado(4);
+        $palavra = $dao->listarFormatado(5);
     ?>
     <link rel='stylesheet' href='/public/css/home.css' type='text/css'>
 
@@ -63,7 +63,7 @@
             <span>Visão</span>
           </div>
           <div class='body'>
-              Nosso encargo é edificar uma igreja de vencedores, onde cada membro é um sacerdote e cada casa uma extensão da igreja, conquistando, assim, a nossa geração para Cristo, através das célula que se multiplicam.
+              Nosso encargo é edificar uma igreja de vencedores, onde cada membro é um sacerdote e cada casa uma extensão da igreja, conquistando, assim, a nossa geração para Cristo, através das células que se multiplicam.
           </div>
         </div>
     </div>

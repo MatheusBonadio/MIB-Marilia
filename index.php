@@ -60,8 +60,7 @@
     <meta content='width=device-width, initial-scale=0.6' name='viewport' />
     <!-- <meta property='og:image' content='https://ibavmarilia.com/public/img/culto/.jpeg' /> -->
     <meta property='og:description' content='&nbsp;' />
-    <meta name='description' content='Acesse e fique por dentro das novidades que ocorrem na nossa igreja local Igreja Batista Água Viva de Marília (IBAV Marília).' />
-    <meta name='keywords' content='igreja, ibav, marilia, ibav marilia, igreja local, eclésia, ministério, edificação, radicais livres' />
+    <meta name='description' content='Nosso encargo é edificar uma igreja de vencedores, onde cada membro é um sacerdote e cada casa uma extensão da igreja, conquistando, assim, a nossa geração para Cristo, através das células que se multiplicam.' />
     <title><?php echo ucfirst($parse_url); ?> | IBAV Marília</title>
     <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
     <link rel='stylesheet' href='/public/css/font.css' type='text/css' />

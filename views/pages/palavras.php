@@ -27,6 +27,10 @@
 														</div>
 														<div class='text'>
 																<div><?php echo $listar['titulo'] ?></div>
+																<div>
+																		<span class='flex'><?php echo $listar['encargo'].' '.$listar['lider'] ?></span>
+																		<span class='flex'><?php echo $listar['categoria'] ?></span>
+																</div>
 																<div><?php echo $listar['texto'] ?></div>
 														</div>
 												</div>

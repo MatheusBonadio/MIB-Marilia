@@ -21,9 +21,11 @@ function select_head(n) {
         setTimeout(function() {
           document.title = sites_format[n] + ' | IBAV Marília';
           window.history.pushState('', '', '/' + sites[n]);
-          $('#loader').hide();
-          $('.content').show();
-          $('.content').html(data);
+          $(function() {
+            $('#loader').hide();
+            $('.content').show();
+            $('.content').html(data);
+          });
         }, 700);
       }
     });
@@ -132,26 +134,6 @@ function initMap() {
   });
 }
 
-window.fbAsyncInit = function() {
-  FB.init({
-    appId: '197402124225732',
-    autoLogAppEvents: true,
-    xfbml: true,
-    version: 'v3.0'
-  });
-};
-
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {
-    return;
-  }
-  js = d.createElement(s);
-  js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 var currentAudio;
 
 function select_audio(audio, titulo, data, img) {
@@ -193,12 +175,4 @@ function select_word(titulo, n, id) {
       }, 700);
     }
   });
-}
-
-function getDuration(src, cb) {
-  var audio = new Audio();
-  $(audio).on('loadedmetadata', function() {
-    cb(audio.duration);
-  });
-  audio.src = src;
 }

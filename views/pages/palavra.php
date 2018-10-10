@@ -32,12 +32,17 @@
             </div>
             <div class='content_side'>
                 <div class='title'>Mídia</div>
-                <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET["titulo"].'.mp3')) { ?>
+                <?php
+                  if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET["titulo"].'.mp3')) {
+                    require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/AudioDAO.php';
+                    $dao = new AudioDAO($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET['titulo'].'.mp3');
+                    $audio = $dao->getDurationEstimate();
+                ?>
                 <a class='button' onclick='select_audio("<?php echo $_GET['titulo'].'.mp3' ?>", "<?php echo $palavra['titulo'] ?>", "<?php echo $palavra['data_formatada'] ?>", "<?php echo $palavra['img'] ?>")'>
                     <div class='material-icons flex'>headset</div>
                     <div class='vertical flex'>
                         <span>OUVIR</span>
-                        <span id='length'>(00:00)</span>
+                        <span>(<?php echo AudioDAO::formatTime($audio) ?>)</span>
                     </div>
                 </a>
                 <a class='button' href='<?php echo '/public/audio/'.$_GET['titulo'].'.mp3' ?>' download>
@@ -47,18 +52,19 @@
                         <span>(<?php echo number_format(filesize($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET['titulo'].'.mp3')/1024/1024, 1, '.', '').' MB' ?>)</span>
                     </div>
                 </a>
-                <script>
-                    getDuration('<?php echo '/public/audio/'.$_GET['titulo'].'.mp3' ?>', function(length) {
-                        length = calculateTotalValue(length);
-                        $('#length').html('('+length+')');
-                    });
-                </script>
                 <?php } ?>
-                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>", "<?php echo $_GET['titulo'] ?>")'>
+                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>", "<?php echo $_GET['titulo'] ?>", 1)'>
                     <div class='material-icons flex'>print</div>
                     <div class='vertical flex'>
                         <span>IMPRIMIR</span>
-                        <span>(Formato PDF)</span>
+                        <span>(Sem referências)</span>
+                    </div>
+                </a>
+                <a class='button' onclick='printable("<?php echo $palavra['titulo'] ?>", "<?php echo $_GET['titulo'] ?>", 0)'>
+                    <div class='material-icons flex'>format_quote</div>
+                    <div class='vertical flex'>
+                        <span>IMPRIMIR</span>
+                        <span>(Com referências)</span>
                     </div>
                 </a>
                 <div class='title'>Mais lidas</div>

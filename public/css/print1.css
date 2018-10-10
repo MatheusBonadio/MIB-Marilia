@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,500');
 @media print {
   @page {
     margin: 1.8cm 1.5cm;
@@ -23,30 +24,31 @@ h1 {
 }
 
 .bible {
-  padding: 10px 0 17px 45px;
+  margin-top: 30px;
+  padding: 10px 0 0 45px;
   box-sizing: border-box;
   font: 300 14px Roboto;
   font-style: italic;
   position: relative;
   color: #0a0a0a;
-  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #818181;
   line-height: 1.85;
 }
 
 .bible::before {
   position: absolute;
-  left: -5px;
-  top: -20px;
+  z-index: 2;
+  left: -3px;
+  top: -35px;
   content: '\201C';
-  font-size: 65px;
+  font-size: 50px;
   color: rgba(0, 0, 0, .7);
   font-weight: bold;
   font-family: Georgia;
 }
 
 .bible .verse {
-  font-size: 11px;
-  vertical-align: super;
+  font-size: 16px;
 }
 
 .bible p {
@@ -57,14 +59,39 @@ h1 {
 .bible p:first-child {
   margin: 0;
   font-size: 16px;
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: 0;
+  padding: 0 10px 0 36px;
+  background-color: #fff;
 }
 
-.word_content .line {
-  width: 100%;
-  height: 1px;
-  margin: 25px 0;
-  background-color: #bdbdbd
+.bible p:nth-child(1n+2) {
+  visibility: hidden;
+  position: absolute;
+  top: -25px;
+  right: 10%;
+  max-width: 36px;
+}
+
+.bible p:last-child {
+  right: 2%;
+}
+
+.bible p:nth-child(2) span, .bible p:last-child span {
+  visibility: visible;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.bible p:nth-child(2) {
+  margin-left: 0;
+}
+
+.bible p:nth-child(2) span {
+  background-color: #fff;
+  z-index: 0;
 }
 
 .share {

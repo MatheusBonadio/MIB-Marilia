@@ -6,26 +6,25 @@
 <link rel='stylesheet' href='/public/css/font.css' type='text/css'>
 
 <div class='word_text'>
-    <?php $biblia->livro('ezequiel', '37', '1', '14'); ?>
 
-    <p>Deus permitiu a morte do povo, que eles chegassem ao fundo do poço para fazer algo extraordinário no meio deles, para que Ele fosse conhecido. Antes de Deus entrar com a solução Ele mostra toda a situação para Ezequiel e também conosco Deus trabalha mostrando como realmente as coisas estão, isso é parte do processo.</p>
+    <?php $biblia->livro('filipenses', '3', '12', '14'); ?>
 
-    <h4>1 - Exposição em meio a vergonha</h4>
+    <p>Todo mundo tem alvos na vida, e nós cristãos devemos saber que Deus tem um alvo pra nós. Paulo sabia que tinha alvo e ele sabia que não havia chegado la, e por isso continuava correndo, procurando cada dia ser mais parecido com Jesus. Não seremos perfeitos nessa vida, mas isso não é motivo para nos nivelarmos por baixo, nos comparar com quem é pior, o nosso alvo deve ser cristo, o nosso padrão é cristo.</p>
 
-    <p>As vezes achamos que as coisas não estão tão mal, porém Deus pode nos mostrar que a situação, na verdade, esta morta, não doente, não em coma, mas morta, é impossível as coisas mudarem e isso é um choque de realidade. Quando Deus quer trazer vida primeiro, Ele nos mostra onde tem morte.</p>
+    <h4>1 - Realidade</h4>
 
-    <h4>2 - A impotência humana</h4>
+    <p>Paulo era um grande homem, porem ainda era homem, sabia que não era santo, impecável. O apóstolo começa com o presente, hoje, para irmos ao alvo precisamos ter clareza da onde estamos, quanto falta? O que precisa melhorar? O que precisamos resolver? Há áreas onde temos que crescer, não é para ficar mal, é pra termos realidade e poder focar onde importa.<p>
 
-    <p>Deus pergunta ao homem, esses ossos podem reviver? Pode o homem dar um jeito? As vezes achamos que sim e por isso Deus tem que nos dar esse choque, pra dependermos dEle e entender que há situações que não estam no nosso controle, mas nada foge do controle divino. Quando você começar a perceber que é impotente também vai reconhecer que Deus é poderoso para resolver.</p>
+    <h4>2 - Esquecer</h4>
 
-    <h4>3 - Através da palavra</h4>
+    <p>Não é esquecer dos nossos erros ou das coisas boas, mas é deixar o peso do passado, quem tem carro sabe que enchê-lo de bagagem o deixa mais pesado e gasta mais gasolina, se você fica remoendo o passado vai gastar sua energia, vai ser mais difícil prosseguir para o alvo.<p>
 
-    <p>O que é impossível para o homem, é possível para Deus, Ezequiel liberou a palavra e quando pronunciamos a palavra a vida começa a ser liberada. Não são palavras de motivação, ou auto ajuda, só a palavra de Deus pode trazer vida, por isso declare e viva pela palavra. O que nós mais precisamos hoje é de uma palavra de Deus.</p>
+    <p>Você não pode ficar vivendo no passado, há coisas novas em Deus e as vezes o que nos impede de viver o novo é porque gostávamos das coisas velhas, viramos uma estátua como a mulher de Ló porque amamos as coisas que deixamos pra trás.<p>
 
-    <h4>4 - Vida</h4>
+    <h4>3 - Avançar</h4>
 
-    <p>Deus traz vida, o que estava morto agora tem um coração batendo, o que estava no chão agora fica de pé. Deus pode e vai fazer, o que você reconhece ser incapaz? Deus pode reviver sua célula, seu coração, seu ministério, a vontade de dEle é que haja vida em nós.</p>
+    <p>O apóstolo olha para o futuro, ele prossegue, avança, mais do que não retroceder, precisamos ir para frente, caminhar, ir para o alvo. Antes Paulo perseguia a igreja, agora ele persegue a coroa da vida, o problema não é perseguir, mas o que você persegue? Você persegue a excelência? A glória de Cristo?. Nós somos comparados como um atleta que corre, que muitas vezes as pernas não conseguem acompanhar o coração que está fixado no alvo.<p>
 
-    <h4>Você tem reconhecido que se Deus não agir, é o fim?</h4>
+    <h4>Qual a sua realidade? Todos os dias você tem perseguido qual alvo?</h4>
 
 </div>

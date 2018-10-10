@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,500');
+@media print {
+  @page {
+    margin: 1.8cm 1.5cm;
+  }
+}
+
+h1 {
+  font: 700 21px Arial;
+}
+
+.bible, .word_text p {
+  margin-bottom: 10px
+}
+
+.word_text p:last-child {
+  margin-bottom: 0;
+}
+
+.word_text {
+  text-align: justify;
+  font: 300 14px Roboto;
+  line-height: 1.85;
+}
+
+.bible {
+  margin-top: 30px;
+  padding: 10px 0 17px 45px;
+  box-sizing: border-box;
+  font: 300 14px Roboto;
+  font-style: italic;
+  position: relative;
+  color: #0a0a0a;
+  border-bottom: 1px solid #818181;
+  border-top: 1px solid #818181;
+  line-height: 1.85;
+}
+
+.bible::before {
+  position: absolute;
+  z-index: 1;
+  left: -5px;
+  top: -42px;
+  content: '\201C';
+  font-size: 65px;
+  color: rgba(0, 0, 0, .7);
+  font-weight: bold;
+  font-family: Georgia;
+}
+
+.bible .verse {
+  font-size: 11px;
+  vertical-align: super;
+}
+
+.bible p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.bible p:first-child {
+  margin: 0;
+  font-size: 16px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  padding: 0 10px 0 47px;
+  background-color: white;
+}
+
+.share {
+  visibility: hidden
+}
+
+.author {
+  font-size: 14px;
+  display: flex;
+  font-family: Arial;
+  margin-bottom: 20px;
+}
+
+.author div:nth-child(2)::after, .author div:nth-child(3)::after {
+  content: "–";
+  margin: 0 7px;
+}
+
+.word_text h4 {
+  margin: 25px 0 10px 0;
+  font: 500 16px Roboto;
+  color: #000;
+}
+
+.word_text p strong {
+  font-weight: 400;
+}

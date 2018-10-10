@@ -1,6 +1,6 @@
-function printable(titulo, titulo2) {
+function printable(titulo, titulo2, referencia) {
   $.ajax({
-    url: "/public/css/print.css",
+    url: "/public/css/print" + referencia + ".css",
     success: function(styleCss) {
       printScreen(styleCss);
     }
@@ -12,12 +12,14 @@ function printable(titulo, titulo2) {
     if (mywindow == null || typeof(mywindow) == 'undefined') {
       //alert('Please disable your pop-up blocker and click the "Open" link again.');
     }
-    mywindow.document.write('<html><head><title>https://ibavmarilia.com/palavras/' + titulo2 + '</title>');
+    mywindow.document.write('<html><head><title>https://ibavmarilia.com/palavras/' + titulo2 + '</title><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500" rel="stylesheet">');
     mywindow.document.write('<style>' + styleCss + '</style>');
     mywindow.document.write('</head><body><h1>' + titulo + '</h1>');
     mywindow.document.write(data);
     mywindow.document.write('</body></html>');
-    mywindow.print();
-    mywindow.close();
+    setTimeout(function(){
+      mywindow.print();
+      mywindow.close();
+    }, 0);
   }
 }
