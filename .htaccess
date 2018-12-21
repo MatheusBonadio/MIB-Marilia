@@ -6,8 +6,11 @@ ErrorDocument 403 /index.php?url=403
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteCond %{QUERY_STRING} "fbclid=" [NC]
+    RewriteRule (.*) /$1? [R=301,L]
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteCond %{SCRIPT_FILENAME} !-d
+    #RewriteRule (.*)$ index.php?url=maintenance [NC,L]
     RewriteRule ^([A-Za-z]+)/?$ index.php?url=$1 [NC]
     RewriteRule ^favicon.ico$ /public/img/system/favicon.ico [NC]
     RewriteRule ^palavras/?([A-Za-z0-9-]+)/?$ index.php?url=palavra&titulo=$1 [NC]
@@ -15,18 +18,18 @@ ErrorDocument 403 /index.php?url=403
 
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresByType image/* A31536000
-    ExpiresByType text/* A31536000
-    ExpiresByType application/* A31536000
-    ExpiresByType font/* A31536000
+    ExpiresByType image/* "access plus 1 week"
+    ExpiresByType text/* "access plus 1 week"
+    ExpiresByType application/* "access plus 1 week"
+    ExpiresByType font/* "access plus 1 week"
 </IfModule>
 
-<Files ~ "^\.(htaccess|htpasswd)$">
+<Files ~ "^\.(htaccess|htpasswd|gitignore)$">
     deny from all
 </Files>
 
 <IfModule mod_deflate.c>
-    <FilesMatch "\.(js|css|jpg|png|gif|ico|php|html|htm|ttf)$">
+    <FilesMatch "\.(js|css|jpg|png|jpeg|gif|ico|php|html|htm|ttf)$">
         <ifModule mod_filter.c>
             SetOutputFilter DEFLATE
             AddOutputFilterByType DEFLATE text/* application/*  image/* font/*

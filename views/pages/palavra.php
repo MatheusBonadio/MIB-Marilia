@@ -24,14 +24,16 @@
                 <div class='line'></div>
                 <div class='share'>
                     <span>Compartilhe: </span>
-                    <a class='socicon socicon-facebook' title='Compartilhar no Facebook' target='_blank' onclick="window.open('https://www.facebook.com/sharer.php?s=100&p[url]=https://ibavmarilia.com/palavras/<?php echo $_GET['titulo']?>','','height=612,width=580,toolbar=0,status=0,')"></a>
-                    <a class='socicon socicon-twitter' title='Compartilhar no Twitter' target='_blank' onclick='window.open("https://twitter.com/intent/tweet?text=<?php echo $palavra['titulo']." - https://ibavmarilia.com/palavras/".$_GET['titulo']; ?>","","height=612,width=700,toolbar=0,status=0,")'></a>
-                    <a class='socicon socicon-whatsapp' title='Compartilhar no Whatsapp' target='_blank' onclick='window.open("https://api.whatsapp.com/send?text=<?php echo $palavra['titulo']." - https://ibavmarilia.com/palavras/".$_GET['titulo']; ?>","","height=612,width=700,toolbar=0,status=0,")'></a>
-                    <a class='socicon material-icons' title='Compartilhar no Email' href='mailto:?subject=IBAV Marília&amp;body=<?php echo $palavra['titulo']." - https://ibavmarilia.com/palavras/".$_GET['titulo']; ?>'>email</a>
+                    <a class='socicon socicon-facebook' title='Compartilhar no Facebook' target='_blank' onclick="window.open('https://www.facebook.com/sharer.php?s=100&p[url]=https://moradaigrejabatista.com/palavras/<?php echo $_GET['titulo']?>','','height=612,width=580,toolbar=0,status=0,')"></a>
+                    <a class='socicon socicon-twitter' title='Compartilhar no Twitter' target='_blank' onclick='window.open("https://twitter.com/intent/tweet?text=<?php echo $palavra['titulo']." - https://moradaigrejabatista.com/palavras/".$_GET['titulo']; ?>","","height=612,width=700,toolbar=0,status=0,")'></a>
+                    <a class='socicon socicon-whatsapp' title='Compartilhar no Whatsapp' target='_blank' onclick='window.open("https://api.whatsapp.com/send?text=<?php echo $palavra['titulo']." - https://moradaigrejabatista.com/palavras/".$_GET['titulo']; ?>","","height=612,width=700,toolbar=0,status=0,")'></a>
+                    <a class='socicon material-icons' title='Compartilhar no Email' href='mailto:?subject=IBAV Marília&amp;body=<?php echo $palavra['titulo']." - https://moradaigrejabatista.com/palavras/".$_GET['titulo']; ?>'>email</a>
                 </div>
             </div>
             <div class='content_side'>
-                <div class='title'>Mídia</div>
+                <div class='title'>
+                    <span>Mídia</span>
+                </div>
                 <?php
                   if(file_exists($_SERVER['DOCUMENT_ROOT'].'/public/audio/'.$_GET["titulo"].'.mp3')) {
                     require_once $_SERVER['DOCUMENT_ROOT'].'/models/dao/AudioDAO.php';
@@ -67,7 +69,7 @@
                         <span>(Com referências)</span>
                     </div>
                 </a>
-                <div class='title'>Mais lidas</div>
+                <!-- <div class='title'>Mais lidas</div> -->
             </div>
         </div>
     </div>

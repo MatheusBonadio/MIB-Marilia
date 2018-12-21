@@ -59,6 +59,7 @@ if (dots.length > 1) {
 
   function showSlides(n) {
     var button = $('.slide_button');
+    var fade = $('.slide_position');
     var line = $('.line');
 
     reset(true);
@@ -76,9 +77,9 @@ if (dots.length > 1) {
       slides.eq(i).removeClass('slide_fade');
     slides.eq(slideIndex - 1).addClass('slide_fade');
 
-    // for (var i = 0; i < button.length; i++)
-    //   button.eq(i).removeClass('content_fade');
-    // button.eq(slideIndex-1).addClass('content_fade');
+    // for (var i = 0; i < fade.length; i++)
+    //   fade.eq(i).removeClass('content_fade');
+    // fade.eq(slideIndex-1).addClass('content_fade');
   }
 
   showSlides(slideIndex);

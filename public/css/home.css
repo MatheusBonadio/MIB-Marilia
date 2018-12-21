@@ -22,7 +22,7 @@
   transition: opacity 1s, visibility .9s;
 }
 
-.slide_fade{
+.slide_fade {
   visibility: visible;
   opacity: 1;
 }
@@ -53,11 +53,11 @@
   text-transform: uppercase;
   margin-top: 10px;
   font: 200 45px Dosis;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 .slide_title strong {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 5px;
 }
 
@@ -67,13 +67,13 @@
 
 .slide_button {
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 20px;
   user-select: none;
   -webkit-user-select: none;
   cursor: pointer;
   color: #222;
   padding: 10px 35px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 13px;
   font-weight: 600;
   overflow: hidden;
@@ -83,8 +83,8 @@
   text-decoration: none;
   transform: scale(0.9);
   box-sizing: border-box;
-  /*opacity: 0;
-	margin-left: 15vw;*/
+  /* opacity: 0;
+	margin-left: 15vw; */
 }
 
 .slide_button:hover {
@@ -124,10 +124,14 @@
   background-color: #fff;
 }
 
-/*.content_fade{
-	opacity: 1;
-	margin-left: 0;
-}*/
+.content_fade{
+  animation: content_fade .6s;
+}
+
+@keyframes content_fade {
+  from{ margin-left: 15vw; opacity: 0}
+  to { margin-left: 0; opacity: 1 }
+}
 
 .arrow {
   cursor: pointer;
@@ -139,8 +143,9 @@
   top: 0;
   right: 0;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .4) 100%);
-  transition: opacity .4s;
+  visibility: visible;
   opacity: .6;
+  transition: opacity .4s, visibility .4s;
 }
 
 .arrow:nth-last-child(2) {
@@ -260,7 +265,7 @@
   padding: 10px;
   border-radius: 50%;
   background-color: #0093d0;
-  margin-right: 12px;
+  margin-right: 17px;
   color: #fff;
   font-size: 22px;
 }
@@ -271,15 +276,44 @@
   font: 300 14px Roboto;
   line-height: 1.6;
   text-align: justify;
-  padding: 10px 0;
+  padding: 0 0 10px 59px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.block_mission .body::before {
+  content: '';
+  top: -8px;
+  left: 20px;
+  position: absolute;
+  background-color: #0093d0;
+  width: 2px;
+  height: 105%;
 }
 
 @media screen and (max-width:800px) {
-  .mission{
+  .mission {
     flex-direction: column;
   }
+
   .block_mission {
     width: auto;
+  }
+
+  .block_mission:nth-child(1n + 2) {
+    margin-top: -2px;
+  }
+
+  .arrow {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .slide_position {
+    width: calc(100% - 30px);
+  }
+
+  .block_mission .body {
+    padding: 0 20px 10px 59px;
   }
 }

@@ -12,23 +12,25 @@
 								</div>
 						</div>
 						<div class='block'>
-								<div class='title'>Visite a IBAV Marília</div>
+								<div class='title'>Visite a MIB Marília</div>
 								<div class='body'>
 										<div id='map'></div>
 										<strong>Rua Ninfa Pietraroia, 628 – Palmital – Marília / SP</strong>
-										<p>E-mail: aguavivamarilia@outlook.com</p>
+										<p>E-mail: contato@moradaigrejabatista.com</p>
 										<p>Culto todo domingo as 19h</p>
 								</div>
 						</div>
 						<div class='block'>
-								<div class='title'>Curta nossa página</div>
+								<div class='title'>Redes sociais</div>
 								<div class='body'>
-										<iframe src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fibavmarilia%2F&tabs&width=357&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=197402124225732' width='357' height='154' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
+										<iframe src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoradaigrejabatista%2F&tabs&width=357&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=197402124225732' width='357' height='154' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
+										<a target='_blank' href='https://instagram.com/morada.ib'><strong>instagram.com</strong>/morada.ib</a>
+										<a target='_blank' href='https://facebook.com/moradaigrejabatista'><strong>facebook.com</strong>/morada.ib</a>
 								</div>
 						</div>
 				</div>
 				<div class='mid'>
-						<span>© <?php echo date('Y')?> IGREJA BATISTA ÁGUA VIVA DE MARÍLIA. TODOS OS DIREITOS RESERVADOS.</span>
+						<span>© <?php echo date('Y')?> MORADA IGREJA BATISTA DE MARÍLIA. TODOS OS DIREITOS RESERVADOS.</span>
 						<div class='img'></div>
 				</div>
 				<div class='dev flex'>Front e Back-end: Matheus Lima Bonadio</div>

@@ -16,15 +16,16 @@ function select_head(n) {
         $('#loader').show();
         $('.content').hide();
         $('.content').html('');
+        $('.header').removeClass('active');
       },
       success: function(data) {
+        $('.content').html(data);
+        document.title = sites_format[n] + ' | MIB Marília';
+        window.history.pushState('', '', '/' + sites[n]);
         setTimeout(function() {
-          document.title = sites_format[n] + ' | IBAV Marília';
-          window.history.pushState('', '', '/' + sites[n]);
           $(function() {
             $('#loader').hide();
             $('.content').show();
-            $('.content').html(data);
           });
         }, 700);
       }
@@ -166,12 +167,12 @@ function select_word(titulo, n, id) {
       $('.content').html('');
     },
     success: function(data) {
+      $('.content').html(data);
+      document.title = titulo + ' | MIB Marília';
+      window.history.pushState('', '', '/palavras/' + n);
       setTimeout(function() {
-        document.title = titulo + ' | IBAV Marília';
-        window.history.pushState('', '', '/palavras/' + n);
         $('#loader').hide();
         $('.content').show();
-        $('.content').html(data);
       }, 700);
     }
   });

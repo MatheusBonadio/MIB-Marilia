@@ -113,7 +113,7 @@ class PalavraDAO
         if (!is_null($limit)) {
             $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc, id_palavra desc LIMIT :limitIndex';
         } else {
-            $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, (select nome from lider where lider.id_lider = palavra.id_lider) as lider, (select sigla from encargo, lider where palavra.id_lider = lider.id_lider and encargo.id_encargo = lider.id_encargo) as encargo, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc, id_palavra desc';
+            $sql = 'SELECT *, (select descricao from categoria where categoria.id_categoria = palavra.id_categoria) as categoria, (select nome from lider where lider.id_lider = palavra.id_lider) as lider, (select foto from lider where lider.id_lider = palavra.id_lider) as img_lider, (select sigla from encargo, lider where palavra.id_lider = lider.id_lider and encargo.id_encargo = lider.id_encargo) as encargo, DATE_FORMAT(data, "%d/%m/%Y") AS data_formatada, DATE_FORMAT(data, "%d") AS dia, DATE_FORMAT(data, "%m") AS mes, DATE_FORMAT(data, "%Y") AS ano FROM palavra ORDER BY data desc, id_palavra desc';
         }
         $prep = $this->con->prepare($sql);
         if (!is_null($limit)) {

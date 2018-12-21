@@ -10,10 +10,13 @@
 
 .title {
   font: 600 10vw Dosis;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
 .subtitle {
   font: 300 2vw Dosis;
   text-align: center;
+  line-height: 1.4;
+  font-style: italic;
 }

@@ -12,14 +12,14 @@ function printable(titulo, titulo2, referencia) {
     if (mywindow == null || typeof(mywindow) == 'undefined') {
       //alert('Please disable your pop-up blocker and click the "Open" link again.');
     }
-    mywindow.document.write('<html><head><title>https://ibavmarilia.com/palavras/' + titulo2 + '</title><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500" rel="stylesheet">');
+    mywindow.document.write('<html><head><title>https://moradaigrejabatista.com/palavras/' + titulo2 + '</title><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500" rel="stylesheet">');
     mywindow.document.write('<style>' + styleCss + '</style>');
     mywindow.document.write('</head><body><h1>' + titulo + '</h1>');
     mywindow.document.write(data);
     mywindow.document.write('</body></html>');
-    setTimeout(function(){
+    setTimeout(function() {
       mywindow.print();
       mywindow.close();
-    }, 0);
+    }, 10);
   }
 }

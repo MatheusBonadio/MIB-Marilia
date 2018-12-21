@@ -45,7 +45,7 @@
                 <span>Quem Somos</span>
             </div>
             <div class='body'>
-                A Igreja Batista Água Viva de Marília é uma igreja evangélica batista e iniciou suas atividades no ano de 2009. Somos filiados à VINHA - Videira e Ministérios associados. Nosso ministério em Marília tem como presidente o Pr. Darcio Gonçalves.
+                A Morada Igreja Batista em Células de Marília é uma igreja evangélica batista e iniciou suas atividades no ano de 2018. Nosso ministério em Marília tem como presidente o Pr. Dárcio Gonçalves.
             </div>
         </div>
         <div class='block_mission'>

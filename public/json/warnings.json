@@ -1,14 +1,18 @@
 {
   "403": {
     "key": "403",
-    "text": "Permissão negada"
+    "text": "Dizem por aí que só o sacerdote <br />tem acesso a este local"
   },
   "404": {
     "key": "404",
-    "text": "Página não encontrada"
+    "text": "Aposto que não foi aqui que <br />Judas perdeu suas botas"
   },
   "soon": {
     "key": "Em breve",
-    "text": "Nosso site ainda está em construção, tenha paciência, <br>o dia sabático chegará logo"
+    "text": "Nosso site ainda está em construção, tenha paciência, <br />o dia sabático chegará logo"
+  },
+  "maintenance": {
+    "key": "Manutenção",
+    "text": "Estamos reconfigurando os alicerces sobre a rocha"
   }
 }

@@ -7,24 +7,22 @@
 
 <div class='word_text'>
 
-    <?php $biblia->livro('filipenses', '3', '12', '14'); ?>
+    <?php $biblia->livro('2reis', '10', '15'); ?>
 
-    <p>Todo mundo tem alvos na vida, e nós cristãos devemos saber que Deus tem um alvo pra nós. Paulo sabia que tinha alvo e ele sabia que não havia chegado la, e por isso continuava correndo, procurando cada dia ser mais parecido com Jesus. Não seremos perfeitos nessa vida, mas isso não é motivo para nos nivelarmos por baixo, nos comparar com quem é pior, o nosso alvo deve ser cristo, o nosso padrão é cristo.</p>
+    <p>Jeú não concordava com o governo ímpio de Acabe e decide lutar contra o rei, no caminho encontra Jonadabe, alguém muito diferente dele, mas que tinha o mesmo propósito, eles tinham o mesmo objetivo, apesar de pensar diferente, se juntaram para o bem de Israel. Nós teremos desavenças, e se não soubermos andar em unidade, não iremos vencer.</p>
 
-    <h4>1 - Realidade</h4>
+    <h4>1 - Teu coração é sincero?</h4>
 
-    <p>Paulo era um grande homem, porem ainda era homem, sabia que não era santo, impecável. O apóstolo começa com o presente, hoje, para irmos ao alvo precisamos ter clareza da onde estamos, quanto falta? O que precisa melhorar? O que precisamos resolver? Há áreas onde temos que crescer, não é para ficar mal, é pra termos realidade e poder focar onde importa.<p>
+    <p>Jonadabe vivia numa família no meio do deserto, separada da nação, sua família não bebia vinho e Jeú era o contrário disso. Apesar disso a pergunta de Jeú é: \"Tens tu sincero o coração para comigo\", você sabe abrir mão do que não é vital? Você sabe não abrir mão do que é essencial? Nós não sabemos todas as coisas, não temos todas as repostas, não somos perfeitos, e para andarmos juntos, não precisamos disso, precisamos ser sinceros de coração.<p>
 
-    <h4>2 - Esquecer</h4>
+    <h4>2 - Segura minha mão</h4>
 
-    <p>Não é esquecer dos nossos erros ou das coisas boas, mas é deixar o peso do passado, quem tem carro sabe que enchê-lo de bagagem o deixa mais pesado e gasta mais gasolina, se você fica remoendo o passado vai gastar sua energia, vai ser mais difícil prosseguir para o alvo.<p>
+    <p>Então vamos lutar, vamos livrar Israel da impiedade, essa reposta é implícita no convite de Jeú para com Jonadabe. Segura a minha mão é um convite para a unidade, para andarmos juntos, saiba abrir mão de certas coisas por um propósito maior. Deixe as diferenças de lado e estenda a mão para quem também é sincero, ore pelo seu irmão, ore pela igreja, ore pelo pastor, lute junto conosco.<p>
 
-    <p>Você não pode ficar vivendo no passado, há coisas novas em Deus e as vezes o que nos impede de viver o novo é porque gostávamos das coisas velhas, viramos uma estátua como a mulher de Ló porque amamos as coisas que deixamos pra trás.<p>
+    <h4>3 -	Venceram juntos</h4>
 
-    <h4>3 - Avançar</h4>
+    <p>Jeú venceu com o auxílio de Jonadabe, sozinho jamais teria conseguido. Se o seu coração é sincero para comigo, se você também deseja que a verdade vença, se junte comigo, sozinhos não podemos, mas juntos conseguimos.<p>
 
-    <p>O apóstolo olha para o futuro, ele prossegue, avança, mais do que não retroceder, precisamos ir para frente, caminhar, ir para o alvo. Antes Paulo perseguia a igreja, agora ele persegue a coroa da vida, o problema não é perseguir, mas o que você persegue? Você persegue a excelência? A glória de Cristo?. Nós somos comparados como um atleta que corre, que muitas vezes as pernas não conseguem acompanhar o coração que está fixado no alvo.<p>
-
-    <h4>Qual a sua realidade? Todos os dias você tem perseguido qual alvo?</h4>
+    <h4>Seu coração não é perfeito, mas ele é sincero para comigo?</h4>
 
 </div>
